@@ -8,7 +8,6 @@
                 <!--begin:Menu link-->
                 <a class="menu-link"  href="{{ route('admin.dashboard') }}" >
                     <span  class="menu-icon" >
-                        <!--begin::Svg Icon | path: assets/media/icons/duotune/art/art002.svg-->
                         <span class="svg-icon svg-icon-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                                 <path opacity="0.3" d="M8.9 21L7.19999 22.6999C6.79999 23.0999 6.2 23.0999 5.8 22.6999L4.1 21H8.9ZM4 16.0999L2.3 17.8C1.9 18.2 1.9 18.7999 2.3 19.1999L4 20.9V16.0999ZM19.3 9.1999L15.8 5.6999C15.4 5.2999 14.8 5.2999 14.4 5.6999L9 11.0999V21L19.3 10.6999C19.7 10.2999 19.7 9.5999 19.3 9.1999Z" fill="currentColor"/>
@@ -59,10 +58,7 @@
                                         request()->is('admin/permission') ||
                                         request()->is('admin/permission/*') ||
                                         request()->is('admin/system/company/profile') ||
-                                        request()->is('admin/system/setting') ||
-                                        request()->is('admin/logActivity') ||
-                                        request()->is('admin/logActivity/*') ||
-                                        request()->is('admin/system/email-config')
+                                        request()->is('admin/system/setting')
                                         ? 'show' : '' }}" >
                     <!--begin:Menu item-->
                     <div  class="menu-item" >
@@ -143,34 +139,6 @@
                                     <span class="fa fa-cog"></span>
                                 </span>
                                 <span class="menu-title" >Settings</span>
-                            </a>
-                        @endcan
-                        <!--end:Menu link-->
-                    </div>
-                    <!--end:Menu item-->
-                    <!--begin:Menu item-->
-                    <div  class="menu-item" >
-                        <!--begin:Menu link-->
-                        @can('emailconfig-list')
-                            <a class="menu-link {{ request()->is('admin/system/email-config') || request()->is('admin/system/email-config/*') ? 'active' : '' }}" href="{{ route('admin.email-config') }}" title="Email Configuration" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-                                <span class="menu-bullet" >
-                                    <span class="fa fa-connectdevelop"></span>
-                                </span>
-                                <span class="menu-title">Email Configuration</span>
-                            </a>
-                        @endcan
-                        <!--end:Menu link-->
-                    </div>
-                    <!--end:Menu item-->
-                    <!--begin:Menu item-->
-                    <div  class="menu-item" >
-                        <!--begin:Menu link-->
-                        @can('logactivity-list')
-                            <a class="menu-link {{ request()->is('admin/logActivity') ? 'active' : '' }}" href="{{ route('admin.logActivity') }}" title="System Log" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-                                <span  class="menu-bullet" >
-                                    <span class="fa fa-tasks"></span>
-                                </span>
-                                <span  class="menu-title" >System Log</span>
                             </a>
                         @endcan
                         <!--end:Menu link-->

@@ -10,6 +10,7 @@ use App\Models\SystemSetting;
 use App\Models\LogActivity;
 use DB;
 use Auth;
+use Str;
 
 class SystemController extends Controller
 {
@@ -71,13 +72,19 @@ class SystemController extends Controller
             }
 
             if ($request->logo) {
-                $logo = time().'.'.$request->logo->extension();
+                $logo = time().'-'.Str::random(6).'.'.$request->logo->extension();
                 $request->logo->move(public_path('company/logos'), $logo);
 
                 $model->logo = $logo;
             }
+            if ($request->footer_logo) {
+                $footer_logo = time().'-'.Str::random(6).'.'.$request->footer_logo->extension();
+                $request->footer_logo->move(public_path('company/logos'), $footer_logo);
+
+                $model->footer_logo = $footer_logo;
+            }
             if ($request->favicon) {
-                $favicon = time().'.'.$request->favicon->extension();
+                $favicon = time().'-'.Str::random(6).'.'.$request->favicon->extension();
                 $request->favicon->move(public_path('company/favicons'), $favicon);
 
                 $model->favicon = $favicon;
@@ -88,9 +95,10 @@ class SystemController extends Controller
             $model->phone = $request->phone;
             $model->website = $request->website;
             $model->country = $request->country;
-            $model->language = $request->language;
-            $model->timezone = $request->timezone;
-            $model->currency = $request->currency;
+            $model->full_address = $request->full_address;
+            $model->map_url = $request->map_url;
+            $model->instagram = $request->instagram;
+            $model->twitter = $request->twitter;
             $model->save();
 
             DB::commit();

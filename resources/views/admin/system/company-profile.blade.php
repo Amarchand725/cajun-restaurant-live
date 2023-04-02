@@ -29,7 +29,7 @@
                             <!--begin::Input group-->
                             <div class="row mb-6">
                                 <!--begin::Label-->
-                                <label class="col-lg-4 col-form-label fw-bold fs-6">Logo</label>
+                                <label class="col-lg-4 col-form-label fw-bold fs-6">Header Logo (White logo will not display.)</label>
                                 <!--end::Label-->
 
                                 <!--begin::Col-->
@@ -37,11 +37,17 @@
                                     <!--begin::Image input-->
                                     @php
                                         $logo = asset('public/company/logos/default.png');
+                                        $footer_logo = asset('public/company/logos/default.png');
                                         $favicon = asset('public/company/logos/default.png');
                                     @endphp
                                     @if(!empty(companyProfile()) && companyProfile()->logo)
                                         @php
                                             $logo = asset('public/company/logos').'/'.companyProfile()->logo;
+                                        @endphp
+                                    @endif
+                                    @if(!empty(companyProfile()) && companyProfile()->footer_logo)
+                                        @php
+                                            $footer_logo = asset('public/company/logos').'/'.companyProfile()->footer_logo;
                                         @endphp
                                     @endif
 
@@ -57,6 +63,38 @@
                                             <i class="bi bi-pencil-fill fs-7"></i>
 
                                             <input type="file" name="logo" accept=".png, .jpg, .jpeg"/>
+                                            <input type="hidden" name="logo_remove"/>
+                                        </label>
+
+                                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel Logo">
+                                            <i class="bi bi-x fs-2"></i>
+                                        </span>
+
+                                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove Logo">
+                                            <i class="bi bi-x fs-2"></i>
+                                        </span>
+                                    </div>
+
+                                    <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                                </div>
+                                <!--end::Col-->
+                            </div>
+                            <!--end::Input group-->
+                            <!--begin::Input group-->
+                            <div class="row mb-6">
+                                <!--begin::Label-->
+                                <label class="col-lg-4 col-form-label fw-bold fs-6">Footer Logo</label>
+                                <!--end::Label-->
+
+                                <!--begin::Col-->
+                                <div class="col-lg-8">
+                                    <div class="image-input image-input-outline image-input-empty" data-kt-image-input="true" style="background-image: url({{ $footer_logo }})">
+                                        <div class="image-input-wrapper w-125px h-125px" style="background-image: none;"></div>
+
+                                        <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change Logo">
+                                            <i class="bi bi-pencil-fill fs-7"></i>
+
+                                            <input type="file" name="footer_logo" accept=".png, .jpg, .jpeg"/>
                                             <input type="hidden" name="logo_remove"/>
                                         </label>
 
@@ -198,6 +236,78 @@
                                 <!--begin::Col-->
                                 <div class="col-lg-8 fv-row">
                                     <input type="text" name="country" value="@if(!empty(companyProfile())) {{ companyProfile()->country }} @endif" class="form-control form-control-lg form-control-solid" placeholder="Country"/>
+                                </div>
+                                <!--end::Col-->
+                            </div>
+                            <!--end::Input group-->
+
+                            <!--begin::Input group-->
+                            <div class="row mb-6">
+                                <!--begin::Label-->
+                                <label class="col-lg-4 col-form-label fw-bold fs-6">
+                                    <span>Full Address</span>
+
+                                    <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Country of origination"></i>
+                                </label>
+                                <!--end::Label-->
+
+                                <!--begin::Col-->
+                                <div class="col-lg-8 fv-row">
+                                    <textarea name="full_address" id="" class="form-control" placeholder="Enter full address">@if(!empty(companyProfile())) {{ companyProfile()->full_address }} @endif</textarea>
+                                </div>
+                                <!--end::Col-->
+                            </div>
+                            <!--end::Input group-->
+
+                            <!--begin::Input group-->
+                            <div class="row mb-6">
+                                <!--begin::Label-->
+                                <label class="col-lg-4 col-form-label fw-bold fs-6">
+                                    <span>Map URL</span>
+
+                                    <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Country of origination"></i>
+                                </label>
+                                <!--end::Label-->
+
+                                <!--begin::Col-->
+                                <div class="col-lg-8 fv-row">
+                                    <textarea name="map_url" id="" class="form-control" placeholder="Enter map url">@if(!empty(companyProfile())) {{ companyProfile()->map_url }} @endif</textarea>
+                                </div>
+                                <!--end::Col-->
+                            </div>
+                            <!--end::Input group-->
+
+                            <!--begin::Input group-->
+                            <div class="row mb-6">
+                                <!--begin::Label-->
+                                <label class="col-lg-4 col-form-label fw-bold fs-6">
+                                    <span>Instagram</span>
+
+                                    <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Country of origination"></i>
+                                </label>
+                                <!--end::Label-->
+
+                                <!--begin::Col-->
+                                <div class="col-lg-8 fv-row">
+                                    <textarea name="instagram" id="" class="form-control" placeholder="Enter instagram link">@if(!empty(companyProfile())) {{ companyProfile()->instagram }} @endif</textarea>
+                                </div>
+                                <!--end::Col-->
+                            </div>
+                            <!--end::Input group-->
+
+                            <!--begin::Input group-->
+                            <div class="row mb-6">
+                                <!--begin::Label-->
+                                <label class="col-lg-4 col-form-label fw-bold fs-6">
+                                    <span>Twitter</span>
+
+                                    <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Country of origination"></i>
+                                </label>
+                                <!--end::Label-->
+
+                                <!--begin::Col-->
+                                <div class="col-lg-8 fv-row">
+                                    <textarea name="twitter" id="" class="form-control" placeholder="Enter twitter link">@if(!empty(companyProfile())) {{ companyProfile()->twitter }} @endif</textarea>
                                 </div>
                                 <!--end::Col-->
                             </div>

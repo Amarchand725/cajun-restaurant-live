@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Kristi&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Yeseva+One&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.kristi {
+    font-family: "Kristi", cursive;
+}
+
+.yeseva {
+    font-family: "Yeseva One", cursive;
+}
+
+.fa-tripadvisor:before {
+    content: "\f262";
+}
+
+#scrollTopBtn.actived {
+    opacity: 1;
+}

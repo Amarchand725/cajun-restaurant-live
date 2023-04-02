@@ -20,6 +20,12 @@ use Illuminate\Support\Facades\Route;
 
 //Frontend
 Route::get('/', [WebController::class, 'index'])->name('home');
+Route::get('/about', [WebController::class, 'about'])->name('about');
+Route::get('/discover-menu', [WebController::class, 'discoverMenu'])->name('discover-menu');
+Route::get('/gallery', [WebController::class, 'gallery'])->name('gallery');
+Route::get('/blog', [WebController::class, 'blog'])->name('blog');
+Route::get('/shop', [WebController::class, 'shop'])->name('shop');
+Route::get('/reservation', [WebController::class, 'reservation'])->name('reservation');
 
 Route::group(['middleware' => ['guest']], function(){
     Route::get('admin/login', [AdminController::class, 'login'])->name('admin.login');

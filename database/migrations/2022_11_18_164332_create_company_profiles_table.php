@@ -16,12 +16,17 @@ return new class extends Migration
         Schema::create('company_profiles', function (Blueprint $table) {
             $table->id();
             $table->string('logo')->nullable();
+            $table->string('footer_logo')->nullable();
             $table->string('favicon')->nullable();
             $table->string('company')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->string('website')->nullable();
             $table->string('country')->nullable();
+            $table->text('full_address')->nullable();
+            $table->text('map_url')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('twitter')->nullable();
             $table->timestamps();
         });
     }

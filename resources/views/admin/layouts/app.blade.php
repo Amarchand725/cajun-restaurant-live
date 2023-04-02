@@ -92,24 +92,13 @@
                     <!--begin::sidebar-->
                     <div id="kt_app_sidebar" class="app-sidebar flex-column" data-kt-drawer="true" data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
                         <!--begin::Logo-->
-                        <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
+                        <div class="app-sidebar-logo px-6 mt-5" id="kt_app_sidebar_logo">
                             <!--begin::Logo image-->
-                            <a href="{{ route('admin.dashboard') }}">
+                            <a href="{{ route('admin.dashboard') }}" style="text-align: center">
                                 <img alt="Logo" src="{{ $logo }}" class="h-55px app-sidebar-logo-default" />
                                 <img alt="Logo" src="{{ $logo }}" class="h-20px app-sidebar-logo-minimize" />
                                 @if(companyProfile())
-                                    @php
-                                        $string = "Progress in Veterinary Science";
-
-                                        function initials($str) {
-                                            $ret = '';
-                                            foreach (explode(' ', $str) as $word)
-                                                $ret .= strtoupper($word[0]);
-                                            return $ret;
-                                        }
-
-                                    @endphp
-                                    {{ initials(companyProfile()->company) }}
+                                    {{ companyProfile()->company }}
                                 @endif
                             </a>
                             <!--end::Logo image-->
