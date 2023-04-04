@@ -22,8 +22,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [WebController::class, 'index'])->name('home');
 Route::get('/about', [WebController::class, 'about'])->name('about');
 Route::get('/discover-menu', [WebController::class, 'discoverMenu'])->name('discover-menu');
-Route::get('/gallery', [WebController::class, 'gallery'])->name('gallery');
-Route::get('/blog', [WebController::class, 'blog'])->name('blog');
+Route::get('/our-gallery', [WebController::class, 'gallery'])->name('our-gallery');
+Route::get('/our-blog', [WebController::class, 'blog'])->name('our-blog');
 Route::get('/shop', [WebController::class, 'shop'])->name('shop');
 Route::get('/reservation', [WebController::class, 'reservation'])->name('reservation');
 
@@ -36,8 +36,22 @@ Route::get('account/verify/{token}', [App\Http\Controllers\UserController::class
 Route::get('dashboard', [App\Http\Controllers\UserController::class, 'dashboard'])->name('dashboard')->middleware(['auth', 'is_verify_email']);
 
 // auto-routes: admin
-Route::get('category/trash/records', 'App\Http\Controllers\general\CategoryController@trashRecords')->name('general.category.trash.records');
-Route::get('category/restore/{id}', 'App\Http\Controllers\general\CategoryController@restore')->name('general.category.restore');
+Route::get('aboutus/trash/records', 'App\Http\Controllers\admin\AboutusController@trashRecords')->name('admin.aboutus.trash.records');
+Route::get('aboutus/restore/{id}', 'App\Http\Controllers\admin\AboutusController@restore')->name('admin.aboutus.restore');
+Route::get('gallery/trash/records', 'App\Http\Controllers\admin\GalleryController@trashRecords')->name('admin.gallery.trash.records');
+Route::get('gallery/restore/{id}', 'App\Http\Controllers\admin\GalleryController@restore')->name('admin.gallery.restore');
+Route::get('menucategory/trash/records', 'App\Http\Controllers\admin\MenucategoryController@trashRecords')->name('admin.menucategory.trash.records');
+Route::get('menucategory/restore/{id}', 'App\Http\Controllers\admin\MenucategoryController@restore')->name('admin.menucategory.restore');
+Route::get('foodservice/trash/records', 'App\Http\Controllers\admin\FoodserviceController@trashRecords')->name('admin.foodservice.trash.records');
+Route::get('foodservice/restore/{id}', 'App\Http\Controllers\admin\FoodserviceController@restore')->name('admin.foodservice.restore');
+Route::get('ourmenu/trash/records', 'App\Http\Controllers\admin\OurmenuController@trashRecords')->name('admin.ourmenu.trash.records');
+Route::get('ourmenu/restore/{id}', 'App\Http\Controllers\admin\OurmenuController@restore')->name('admin.ourmenu.restore');
+
+
+Route::get('slider/trash/records', 'App\Http\Controllers\admin\SliderController@trashRecords')->name('admin.slider.trash.records');
+Route::get('slider/restore/{id}', 'App\Http\Controllers\admin\SliderController@restore')->name('admin.slider.restore');
+Route::get('blog/trash/records', 'App\Http\Controllers\admin\BlogController@trashRecords')->name('admin.blog.trash.records');
+Route::get('blog/restore/{id}', 'App\Http\Controllers\admin\BlogController@restore')->name('admin.blog.restore');
 
 Route::group(['prefix'=>'admin', 'middleware' => 'auth'], function() {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
@@ -99,5 +113,13 @@ Route::group(['prefix'=>'admin', 'middleware' => 'auth'], function() {
 
 require __DIR__.'/auth.php';
 
+Route::resource('admin/blog', 'App\Http\Controllers\admin\BlogController');
 
-Route::resource('general/category', 'App\Http\Controllers\general\CategoryController');
+Route::resource('admin/slider', 'App\Http\Controllers\admin\SliderController');
+
+Route::resource('admin/ourmenu', 'App\Http\Controllers\admin\OurmenuController');
+Route::resource('admin/foodservice', 'App\Http\Controllers\admin\FoodserviceController');
+Route::resource('admin/menucategory', 'App\Http\Controllers\admin\MenucategoryController');
+
+Route::resource('admin/gallery', 'App\Http\Controllers\admin\GalleryController');
+Route::resource('admin/aboutus', 'App\Http\Controllers\admin\AboutusController');

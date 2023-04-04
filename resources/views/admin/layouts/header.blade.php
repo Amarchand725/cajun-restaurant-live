@@ -5,6 +5,11 @@
         <div class="menu menu-rounded menu-column menu-lg-row my-5 my-lg-0 align-items-stretch fw-semibold px-2 px-lg-0" id="kt_app_header_menu" data-kt-menu="true">
             <!--begin:Menu item-->
             <div  class="menu-item me-lg-1" >
+                <!--begin:Menu link-->
+                <a class="menu-link py-3" target="_blank" href="{{ route('home') }}" >
+                    <span  class="menu-title" ><i class="fa fa-globe"></i> <span style="margin-left:5px">Go to Website</span></span>
+                </a>
+                <!--end:Menu link-->
             </div>
             <!--end:Menu item-->
         </div>

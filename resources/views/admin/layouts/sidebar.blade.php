@@ -53,10 +53,10 @@
                                         request()->is('admin/user/*') ||
                                         request()->is('admin/menu') ||
                                         request()->is('admin/menu/*') ||
-                                        request()->is('admin/role') ||
-                                        request()->is('admin/role/*') ||
-                                        request()->is('admin/permission') ||
-                                        request()->is('admin/permission/*') ||
+                                        // request()->is('admin/role') ||
+                                        // request()->is('admin/role/*') ||
+                                        // request()->is('admin/permission') ||
+                                        // request()->is('admin/permission/*') ||
                                         request()->is('admin/system/company/profile') ||
                                         request()->is('admin/system/setting')
                                         ? 'show' : '' }}" >

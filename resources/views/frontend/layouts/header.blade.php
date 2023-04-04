@@ -5,8 +5,16 @@
                 <div class="grid grid-cols-12 items-center">
                     <div class="col-span-2 xl:col-span-3">
                         <div class="logo">
+                            @php
+                                $logo = asset('public/company/logos/default.png');
+                            @endphp
+                            @if(!empty(companyProfile()) && companyProfile()->logo)
+                                @php
+                                    $logo = asset('public/company/logos').'/'.companyProfile()->logo;
+                                @endphp
+                            @endif
                             <a href="{{ route('home') }}">
-                                <img loading="lazy" src="{{ asset('public/frontend') }}/img/logo-light.png" height="46" width="196" alt="" />
+                                <img loading="lazy" src="{{ $logo }}" height="46" width="196" alt="" />
                             </a>
                         </div>
                     </div>
@@ -25,7 +33,7 @@
                                 <div>
                                     <a href="{{ route('about') }}" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
                                         <span class="text-white hover:text-[#d3a971] uppercase">
-                                        About
+                                        Our Story
                                         </span>
                                     </a>
                                 </div>
@@ -41,7 +49,7 @@
                             </li>
                             <li class="relative group">
                                 <div>
-                                    <a href="{{ route('gallery') }}" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
+                                    <a href="{{ route('our-gallery') }}" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
                                         <span class="text-white hover:text-[#d3a971] uppercase">
                                         Gallery
                                         </span>
@@ -50,7 +58,7 @@
                             </li>
                             <li class="relative group">
                                 <div>
-                                    <a href="{{ route('blog') }}" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
+                                    <a href="{{ route('our-blog') }}" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
                                         <span class="text-white hover:text-[#d3a971] uppercase">
                                         Blog
                                         </span>
@@ -59,7 +67,7 @@
                             </li>
                             <li class="relative group">
                                 <div>
-                                    <a href="{{ route('shop') }}" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
+                                    <a href="#" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
                                         <span class="text-white hover:text-[#d3a971] uppercase">
                                         Shop
                                         </span>
@@ -67,9 +75,9 @@
                                 </div>
                             </li>
                             <li class="">
-                                <a href="{{ route('reservation') }}" class="border-white border-2 min-w-[129px] h-[40px] leading-[35px] text-center block text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
+                                <a href="#" class="border-white border-2 min-w-[129px] h-[40px] leading-[35px] text-center block text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
                                     <span class="text-white hover:text-[#d3a971] uppercase px-3">
-                                        Reservation
+                                        Order Now
                                     </span>
                                 </a>
                             </li>

@@ -3,21 +3,33 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Slider;
+use App\Models\Foodservice;
+use App\Models\Menucategory;
+use App\Models\Blog;
+use App\Models\Aboutus;
 
 class WebController extends Controller
 {
     public function index()
     {
-        return view('frontend.index');
+        $data = [];
+        $data['sliders'] = Slider::orderby('id', 'desc')->where('status', 1)->get();
+        $data['food_services'] = Foodservice::where('status', 1)->get();
+        $data['menu_categories'] = Menucategory::where('status', 1)->take(2)->get();
+        $data['blogs'] = Blog::where('status', 1)->get();
+        return view('frontend.index', compact('data'));
     }
 
     public function about()
     {
-        return view('frontend.about');
+        $about_us = Aboutus::orderby('id', 'desc')->where('status', 1)->first();
+        return view('frontend.about', compact('about_us'));
     }
     public function discoverMenu()
     {
-        return view('frontend.discover-menu');
+        $data['menu_categories'] = Menucategory::where('status', 1)->get();
+        return view('frontend.discover-menu', compact('data'));
     }
     public function gallery()
     {
@@ -25,7 +37,8 @@ class WebController extends Controller
     }
     public function blog()
     {
-        return view('frontend.blog');
+        $blogs = Blog::orderby('id', 'desc')->where('status', 1)->get();
+        return view('frontend.blog', compact('blogs'));
     }
     public function shop()
     {

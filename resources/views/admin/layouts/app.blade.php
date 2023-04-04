@@ -97,9 +97,9 @@
                             <a href="{{ route('admin.dashboard') }}" style="text-align: center">
                                 <img alt="Logo" src="{{ $logo }}" class="h-55px app-sidebar-logo-default" />
                                 <img alt="Logo" src="{{ $logo }}" class="h-20px app-sidebar-logo-minimize" />
-                                @if(companyProfile())
+                                {{-- @if(companyProfile())
                                     {{ companyProfile()->company }}
-                                @endif
+                                @endif --}}
                             </a>
                             <!--end::Logo image-->
                             <!--begin::Sidebar toggle-->

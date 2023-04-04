@@ -14,9 +14,9 @@
                     <li class="">
                         <a href="javascript:;" class="flex flex-warp gap-x-2 items-center justify-center group">
                             <div class="">
-                                <p
-                                    class="text-[14px] font-[400] text-[#fff] text-center group-hover:text-[#d3a971] duration-700">
-                                    HOME</p>
+                                <p class="text-[14px] font-[400] text-[#fff] text-center group-hover:text-[#d3a971] duration-700">
+                                    HOME
+                                </p>
                             </div>
                             <div class="text-[#fff] font-[400] text-center">
                                 >
@@ -26,8 +26,7 @@
                     <li class="">
                         <a href="javascript:;" class="flex flex-warp gap-x-2 items-center justify-center group">
                             <div class="">
-                                <p
-                                    class="text-[14px] font-[400] text-[#fff] text-center group-hover:text-[#d3a971] duration-700">
+                                <p class="text-[14px] font-[400] text-[#fff] text-center group-hover:text-[#d3a971] duration-700">
                                     About</p>
                             </div>
                             <div class="text-[#fff] font-[400] text-center">
@@ -53,20 +52,23 @@
                     <h3 class="lg:text-[40px] md:text-[35px] text-[30px] kristi mb-[8px] text-center text-[#d3a971] mt-5">
                         Welcome To The El Royale
                     </h3>
-                    <h1
-                        class="yeseva sm:text-[37px] text-[25px] font-[400] mb-[10px] mx-auto text-center lg:w-5/12 w-full leading-[1.2] text-[#282827]">
-                        Delicious Food, Friendly Staff, Cozy Atmosphere & Positive Emotions!</h1>
+                    <h1 class="yeseva sm:text-[37px] text-[25px] font-[400] mb-[10px] mx-auto text-center lg:w-5/12 w-full leading-[1.2] text-[#282827]">
+                    {{ $about_us->title }}
+                    </h1>
                     <img src="{{url('public/frontend/img/heading-icon.png')}}" alt="" class="mx-auto mb-5">
                 </div>
                 <div class="grid grid-cols-12 items-center pt-5 lg:gap-0 gap-5">
                     <div class="lg:col-span-4 col-span-12 lg:pt-10 pt-0">
                         <div class="">
-                            <img src="{{url('public/frontend/img/delicious-food-logo.png')}}" alt="" class="mx-auto">
-                            <p
-                                class="text-center mx-auto text-[14px] font-[700] leading-[24px] mb-[15px] text-[#9b9b9b] lg:w-10/12 w-full">
-                                El Royale was the first restaurant to open in Egypt, the resturant was designed with the
-                                history in mind we have created a soft industrial dining room.</p>
-                            <img src="{{url('public/frontend/img/signature.png')}}" alt="" class="mx-auto">
+                            @if(!empty($about_us->short_description_logo))
+                                <img src="{{url('public/admin/images/aboutuses')}}/{{ $about_us->short_description_logo }}" alt="" class="mx-auto">
+                            @endif
+                            <p class="text-center mx-auto text-[14px] font-[700] leading-[24px] mb-[15px] text-[#9b9b9b] lg:w-10/12 w-full">
+                                {{ $about_us->short_description }}
+                            </p>
+                            @if(!empty($about_us->signature))
+                                <img src="{{url('public/admin/images/aboutuses')}}/{{ $about_us->signature }}" alt="" class="mx-auto">
+                            @endif
                         </div>
                     </div>
                     <div class="lg:col-span-4 col-span-12">
@@ -77,23 +79,20 @@
                                 <ul class="text-[14px] font-[400] text-[#9b9b9b]">
                                     <li class="flex flex-warp justify-between items-center border-dashed border-b-[1px]">
                                         <span class="leading-[40px]">Week days</span>
-                                        <span>09.00 – 24:00</span>
+                                        <span>{{ $about_us->week_days_timing }}</span>
                                     </li>
                                     <li class="flex flex-warp justify-between items-center border-dashed border-b-[1px]">
                                         <span class="leading-[40px]">Saturday</span>
-                                        <span>08:00 – 03.00
-                                        </span>
+                                        <span>{{ $about_us->saturday_timing }}</span>
                                     </li>
                                     <li class="flex flex-warp justify-between items-center">
                                         <span class="leading-[40px]">Saturday</span>
-                                        <span>Day off
-                                        </span>
+                                        <span>{{ $about_us->sunday_timing }}</span>
                                     </li>
                                 </ul>
                                 <div class="">
                                     <h3 class="kristi text-[30px] text-[#d3a971]">Call Us Now</h3>
-                                    <a class="yeseva text-[27px] text-[#fff] mb-[6px]"
-                                        href="tel:0201023456789">0201023456789</a>
+                                    <a class="yeseva text-[27px] text-[#fff] mb-[6px]" href="tel:0201023456789">{{ $about_us->call_now }}</a>
                                 </div>
                             </div>
                         </div>
@@ -101,19 +100,11 @@
                     <div class="lg:col-span-4 col-span-12 lg:ml-[40px] ml-0 lg:pt-10 pt-0">
                         <div class="">
                             <p class="text-[14px] mb-[20px] leading-[24px] font-[400] text-[#9b9b9b] lg:w-[95%] w-full">
-                                Allow us to make
-                                your next special event extra special. We cater for all sized functions, ideal for your
-                                larger functions or an intimate gathering, our team can curate a menu to suit your
-                                taste.
-                            </p>
-                            <p class="text-[14px] mb-[30px] leading-[24px] font-[400] text-[#9b9b9b]">Reservations are
-                                for lunch and dinner, check the availability of your table & book it
-                                now!
+                                {{ $about_us->about_us }}
                             </p>
                             <div class="group">
-                                <a href="javascript:;"
-                                    class=" bg-[#d3a971] text-[#fff] border border-[1px] border-[#d3a971] shadow-xl text-[13px] px-10 py-4 rounded-[1px] font-[700] group-hover:bg-[#282828] duration-700">
-                                    Reservation
+                                <a href="javascript:;" class=" bg-[#d3a971] text-[#fff] border border-[1px] border-[#d3a971] shadow-xl text-[13px] px-10 py-4 rounded-[1px] font-[700] group-hover:bg-[#282828] duration-700">
+                                    Book Now
                                 </a>
                             </div>
                         </div>
@@ -140,7 +131,7 @@
     </section>
     <!-- take a taste end -->
 
-    <!-- daily fresh start -->
+    {{-- <!-- daily fresh start -->
     <section class="">
         <div class="daily-fresh lg:pb-[40px] lg:pt-[100px] py-10">
             <div class="max-w-6xl mx-auto">
@@ -441,7 +432,7 @@
             </div>
         </div>
     </section>
-    <!-- People talk end-->
+    <!-- People talk end--> --}}
 
     <!-- event start -->
     <section class="py-[100px]">

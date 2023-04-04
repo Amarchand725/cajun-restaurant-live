@@ -120,7 +120,7 @@
                                                         @endif
                                                     </td>
                                                     <td>
-                                                        <a href="{{route('admin.user.create-spacial-permission', $model->id)}}" data-toggle="tooltip" data-placement="top" title="Assign Spacial Permissions" class="btn btn-warning btn-sm"><i class="fa fa-lock"></i></a>
+                                                        {{-- <a href="{{route('admin.user.create-spacial-permission', $model->id)}}" data-toggle="tooltip" data-placement="top" title="Assign Spacial Permissions" class="btn btn-warning btn-sm"><i class="fa fa-lock"></i></a> --}}
                                                         <a href="{{route('user.show', $model->id)}}" data-toggle="tooltip" data-placement="top" title="Show Details" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
                                                         @can('user-edit')
                                                             <a href="{{route('user.edit', $model->id)}}" data-toggle="tooltip" data-placement="top" title="Edit user" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
