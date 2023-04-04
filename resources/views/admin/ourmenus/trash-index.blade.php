@@ -73,7 +73,7 @@
                                         @foreach($models as $key=>$model)
                                             <tr id="id-{{ $model->id }}">
                                                 <td>{{  $models->firstItem()+$key }}.</td>
-                                                <td>{!! $model->title !!}</td><td>{!! $model->slug !!}</td><td>{!! $model->price !!}</td><td>{!! $model->discount_price !!}</td><td>{!! $model->description !!}</td><td>@if($model->status)<span class="badge badge-success">Active</span>@else<span class="badge badge-danger">In-Active</span>@endif</td><td width="250px"><a href="{{ route("admin.ourmenu.restore", $model->id) }}" data-toggle="tooltip" data-placement="top" title="Restore Ourmenu" class="btn btn-primary btn-sm"><i class="fa fa-refresh"></i> Restore</a></td>
+                                                <td>{!! $model->title !!}</td><td>{!! $model->slug !!}</td><td>${!! $model->price !!}</td><td>{!! $model->discount_price !!}</td><td>{!! $model->description !!}</td><td>@if($model->status)<span class="badge badge-success">Active</span>@else<span class="badge badge-danger">In-Active</span>@endif</td><td width="250px"><a href="{{ route("admin.ourmenu.restore", $model->id) }}" data-toggle="tooltip" data-placement="top" title="Restore Ourmenu" class="btn btn-primary btn-sm"><i class="fa fa-refresh"></i> Restore</a></td>
                                             </tr>
                                         @endforeach
                                         <tr>

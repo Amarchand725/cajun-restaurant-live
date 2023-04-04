@@ -76,9 +76,9 @@
                     @php
                         $logo = asset('public/company/logos/default.png');
                     @endphp
-                    @if(!empty(companyProfile()) && companyProfile()->footer_logo)
+                    @if(!empty(companyProfile()) && companyProfile()->logo)
                         @php
-                            $logo = asset('public/company/logos').'/'.companyProfile()->footer_logo;
+                            $logo = asset('public/company/logos').'/'.companyProfile()->logo;
                         @endphp
                     @endif
                     <a href="{{ route('home') }}" class="mb-12">

@@ -31,12 +31,21 @@
                         <div class="row mb-6">
                             <label for="image" class="col-lg-2 col-form-label required fw-bold fs-6">Image</label>
                             <div class="col-lg-8 fv-row">
-                                @php $default = asset("public/default.png");
-                                @endphp
-                                <div class="image-input image-input-outline image-input-empty" data-kt-image-input="true" style="background-image: url({{ $default }})">
-                                    <div class="image-input-wrapper w-125px h-125px" style="background-image: none;"></div>
-                                    <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change Logo"><i class="bi bi-pencil-fill fs-7"></i><input type="file" name="image" accept=".png, .jpg, .jpeg"/></label><span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel Logo"><i class="bi bi-x fs-2"></i></span><span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove Logo"><i class="bi bi-x fs-2"></i></span></div><span style="color: red">{{ $errors->first("image") }}</span></div></div> <div class="row mb-6">
-                            <label for="status" class="col-lg-2 col-form-label required fw-bold fs-6">Status</label><div class="col-lg-8 fv-row"><select class="selectpicker" name="status" data-live-search="true"><option value="1" {{ old("status")==1?"selected":"" }}>Active</option><option value="0" {{ old("status")==0?"selected":"" }}>In Active</option></select><span style="color: red">{{ $errors->first("status") }}</span></div></div>
+                                <input type="file" name="images[]" id="gallery-photo-add" class="form-control" multiple accept=".png, .jpg, .jpeg"/>
+                                <div class="gallery"></div>
+                                <span style="color: red">{{ $errors->first("image") }}</span>
+                            </div>
+                        </div>
+                        <div class="row mb-6">
+                            <label for="status" class="col-lg-2 col-form-label required fw-bold fs-6">Status</label>
+                            <div class="col-lg-8 fv-row">
+                                <select class="selectpicker" name="status" data-live-search="true">
+                                    <option value="1" {{ old("status")==1?"selected":"" }}>Active</option>
+                                    <option value="0" {{ old("status")==0?"selected":"" }}>In Active</option>
+                                </select>
+                                <span style="color: red">{{ $errors->first("status") }}</span>
+                            </div>
+                        </div>
                     </div>
                     <!--begin::Actions-->
                     <div class="card-footer d-flex justify-content-end py-6 px-9">
@@ -64,4 +73,30 @@
 </div>
 @endsection
 @push('js')
+    <script>
+        $(function() {
+            // Multiple images preview in browser
+            var imagesPreview = function(input, placeToInsertImagePreview) {
+
+                if (input.files) {
+                    var filesAmount = input.files.length;
+
+                    for (i = 0; i < filesAmount; i++) {
+                        var reader = new FileReader();
+
+                        reader.onload = function(event) {
+                            $($.parseHTML('<img style="width:70px; height:60px; margin-top:10px; margin-left:2px">')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
+                        }
+
+                        reader.readAsDataURL(input.files[i]);
+                    }
+                }
+
+            };
+
+            $('#gallery-photo-add').on('change', function() {
+                imagesPreview(this, 'div.gallery');
+            });
+        });
+    </script>
 @endpush

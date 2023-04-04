@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
@@ -57,12 +57,20 @@ class GalleryController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, Gallery::getValidationRules());
-        $input = $request->all();
         DB::beginTransaction();
 
         try{
-            if (isset($request->image)) {$image = Str::random(5).date("d-m-Y-His").".".$request->file("image")->getClientOriginalExtension();$request->image->move(public_path("/admin/images/galleries"), $image);$input["image"] = $image;}
-	        Gallery::create($input);
+            $images = [];
+
+            foreach ($request->images as $image) {
+                $image_name = Str::random(5).date("d-m-Y-His").".".$image->getClientOriginalExtension();
+                $image->move(public_path("/admin/images/galleries"), $image_name);
+
+                Gallery::create([
+                    'image' => $image_name,
+                    'status' => $request->status,
+                ]);
+            }
 
             DB::commit();
             return redirect()->route('gallery.index')->with('message', 'Gallery Added Successfully !');

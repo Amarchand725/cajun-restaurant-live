@@ -91,7 +91,7 @@
                                                 <td>{{  $models->firstItem()+$key }}.</td>
                                                 <td>{!! $model->hasCategory->title??'N/A' !!}</td>
                                                 <td>{!! $model->title !!}</td>
-                                                <td>{!! $model->price !!}</td>
+                                                <td>${!! $model->price !!}</td>
                                                 <td>{!! $model->description !!}</td>
                                                 <td>
                                                     @if($model->status)

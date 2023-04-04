@@ -61,7 +61,7 @@
                                         request()->is('admin/system/setting')
                                         ? 'show' : '' }}" >
                     <!--begin:Menu item-->
-                    <div  class="menu-item" >
+                    {{-- <div  class="menu-item" >
                         <!--begin:Menu link-->
                         @can('menu-list')
                             <a class="menu-link {{ request()->is('admin/menu') || request()->is('admin/menu/*') ? 'active' : '' }}" href="{{ route('menu.index') }}" title="All Menus" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right" >
@@ -72,10 +72,10 @@
                             </a>
                         @endcan
                         <!--end:Menu link-->
-                    </div>
+                    </div> --}}
                     <!--end:Menu item-->
                     <!--begin:Menu item-->
-                    <div  class="menu-item" >
+                    {{-- <div  class="menu-item" >
                         <!--begin:Menu link-->
                         @can('user-list')
                             <a class="menu-link {{ request()->is('admin/user') || request()->is('admin/user/*') ? 'active' : '' }}" href="{{ route('user.index') }}" title="All Users" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right" >
@@ -86,10 +86,10 @@
                             </a>
                         @endcan
                         <!--end:Menu link-->
-                    </div>
+                    </div> --}}
                     <!--end:Menu item-->
                     <!--begin:Menu item-->
-                    <div  class="menu-item" >
+                    {{-- <div  class="menu-item" >
                         <!--begin:Menu link-->
                         @can('role-list')
                             <a class="menu-link {{ request()->is('admin/role') || request()->is('admin/role/*') ? 'active' : '' }}" href="{{ route('role.index') }}" title="All Roles" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right" >
@@ -114,7 +114,7 @@
                             </a>
                         @endcan
                         <!--end:Menu link-->
-                    </div>
+                    </div> --}}
                     <!--end:Menu item-->
                     <!--begin:Menu item-->
                     <div  class="menu-item" >
@@ -131,7 +131,7 @@
                     </div>
                     <!--end:Menu item-->
                     <!--begin:Menu item-->
-                    <div  class="menu-item" >
+                    {{-- <div  class="menu-item" >
                         <!--begin:Menu link-->
                         @can('setting-list')
                             <a class="menu-link {{ request()->is('admin/system/setting') || request()->is('admin/system/setting/*') ? 'active' : '' }}" href="{{ route('admin.system.setting') }}" title="Setting" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right" >
@@ -142,7 +142,7 @@
                             </a>
                         @endcan
                         <!--end:Menu link-->
-                    </div>
+                    </div> --}}
                     <!--end:Menu item-->
                 </div>
                 <!--end:Menu sub-->

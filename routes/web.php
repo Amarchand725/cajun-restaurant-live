@@ -47,7 +47,6 @@ Route::get('foodservice/restore/{id}', 'App\Http\Controllers\admin\FoodserviceCo
 Route::get('ourmenu/trash/records', 'App\Http\Controllers\admin\OurmenuController@trashRecords')->name('admin.ourmenu.trash.records');
 Route::get('ourmenu/restore/{id}', 'App\Http\Controllers\admin\OurmenuController@restore')->name('admin.ourmenu.restore');
 
-
 Route::get('slider/trash/records', 'App\Http\Controllers\admin\SliderController@trashRecords')->name('admin.slider.trash.records');
 Route::get('slider/restore/{id}', 'App\Http\Controllers\admin\SliderController@restore')->name('admin.slider.restore');
 Route::get('blog/trash/records', 'App\Http\Controllers\admin\BlogController@trashRecords')->name('admin.blog.trash.records');

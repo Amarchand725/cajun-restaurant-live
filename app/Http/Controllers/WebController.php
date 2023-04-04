@@ -8,6 +8,7 @@ use App\Models\Foodservice;
 use App\Models\Menucategory;
 use App\Models\Blog;
 use App\Models\Aboutus;
+use App\Models\Gallery;
 
 class WebController extends Controller
 {
@@ -33,7 +34,8 @@ class WebController extends Controller
     }
     public function gallery()
     {
-        return view('frontend.gallery');
+        $galleries = Gallery::where('status', 1)->take(20)->get();
+        return view('frontend.gallery', compact('galleries'));
     }
     public function blog()
     {

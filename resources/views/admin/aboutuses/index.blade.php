@@ -37,15 +37,15 @@
                         <!--end::Page title-->
 
                         <!--begin::Actions-->
-                        <div class="d-flex align-items-center gap-2 gap-lg-3">
+                        {{-- <div class="d-flex align-items-center gap-2 gap-lg-3"> --}}
                             <!--begin::Primary button-->
-                            @can('aboutus-create')
+                            {{-- @can('aboutus-create')
                                 <a href="{{ route('aboutus.create') }}" class="btn btn-sm fw-bold btn-primary">Add New Aboutus</a>
-                            @endcan
-                            <a href="{{ route('admin.aboutus.trash.records') }}" title="{{ $page_title }} Trash Records" class="btn btn-sm fw-bold btn-primary">Restore</a>
-                            <span id="trash-record-count">{{ count($onlySoftDeleted) }}</span> Records Deleted
+                            @endcan --}}
+                            {{-- <a href="{{ route('admin.aboutus.trash.records') }}" title="{{ $page_title }} Trash Records" class="btn btn-sm fw-bold btn-primary">Restore</a>
+                            <span id="trash-record-count">{{ count($onlySoftDeleted) }}</span> Records Deleted --}}
                             <!--end::Primary button-->
-                        </div>
+                        {{-- </div> --}}
                         <!--end::Actions-->
                     </div>
                     <!--end::Toolbar container-->
@@ -77,7 +77,13 @@
                                     <thead>
                                         <tr>
                                             <th>SL</th>
-                                            <th>WEEK_DAYS_TIMING</th><th>SATURDAY_TIMING</th><th>SUNDAY_TIMING</th><th>CALL_NOW</th><th>LOGO</th><th>SIGNATURE</th><th>STATUS</th>
+                                            <th>WEEK_DAYS_TIMING</th>
+                                            <th>SATURDAY_TIMING</th>
+                                            <th>SUNDAY_TIMING</th>
+                                            <th>CALL_NOW</th>
+                                            <th>LOGO</th>
+                                            <th>SIGNATURE</th>
+                                            <th>STATUS</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -85,7 +91,36 @@
                                         @foreach($models as $key=>$model)
                                             <tr id="id-{{ $model->id }}">
                                                 <td>{{  $models->firstItem()+$key }}.</td>
-                                                <td>{!! $model->week_days_timing !!}</td><td>{!! $model->saturday_timing !!}</td><td>{!! $model->sunday_timing !!}</td><td>{!! $model->call_now !!}</td><td>@if($model->short_description_logo)<img style="border-radius: 50%;" src="{{ asset("public/admin/images/aboutuses") }}/{{ $model->short_description_logo }}" width="50px" height="50px" alt="">@else<img style="border-radius: 50%;" src="{{ asset("public/default.png") }}" width="50px" height="50px" alt="">@endif</td><td>@if($model->signature)<img style="border-radius: 50%;" src="{{ asset("public/admin/images/aboutuses") }}/{{ $model->signature }}" width="50px" height="50px" alt="">@else<img style="border-radius: 50%;" src="{{ asset("public/default.png") }}" width="50px" height="50px" alt="">@endif</td><td>@if($model->status)<span class="badge badge-success">Active</span>@else<span class="badge badge-danger">In-Active</span>@endif</td><td width="250px"><a href="{{ route("aboutus.show", $model->id) }}" data-toggle="tooltip" data-placement="top" title="Show Aboutus" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a><a href="{{ route("aboutus.edit", $model->id) }}" data-toggle="tooltip" data-placement="top" title="Edit Aboutus" class="btn btn-primary btn-sm" style="margin-left: 3px;"><i class="fa fa-edit"></i></a><button data-toggle="tooltip" data-placement="top" title="Delete Aboutus" class="btn btn-danger btn-sm delete" data-slug="{{ $model->id }}" data-del-url="{{ route("aboutus.destroy", $model->id) }}" style="margin-left: 3px;"><i class="fa fa-trash"></i></button></td>
+                                                <td>{!! $model->week_days_timing !!}</td>
+                                                <td>{!! $model->saturday_timing !!}</td>
+                                                <td>{!! $model->sunday_timing !!}</td>
+                                                <td>{!! $model->call_now !!}</td>
+                                                <td>
+                                                    @if($model->short_description_logo)
+                                                        <img style="border-radius: 50%;" src="{{ asset("public/admin/images/aboutuses") }}/{{ $model->short_description_logo }}" width="50px" height="50px" alt="">
+                                                    @else
+                                                        <img style="border-radius: 50%;" src="{{ asset("public/default.png") }}" width="50px" height="50px" alt="">
+                                                    @endif
+                                                </td>
+                                                <td>
+                                                    @if($model->signature)
+                                                        <img style="border-radius: 50%;" src="{{ asset("public/admin/images/aboutuses") }}/{{ $model->signature }}" width="50px" height="50px" alt="">
+                                                    @else
+                                                        <img style="border-radius: 50%;" src="{{ asset("public/default.png") }}" width="50px" height="50px" alt="">
+                                                    @endif
+                                                </td>
+                                                <td>
+                                                    @if($model->status)
+                                                        <span class="badge badge-success">Active</span>
+                                                    @else
+                                                        <span class="badge badge-danger">In-Active</span>
+                                                    @endif
+                                                </td>
+                                                <td width="250px">
+                                                    <a href="{{ route("aboutus.show", $model->id) }}" data-toggle="tooltip" data-placement="top" title="Show Aboutus" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
+                                                    <a href="{{ route("aboutus.edit", $model->id) }}" data-toggle="tooltip" data-placement="top" title="Edit Aboutus" class="btn btn-primary btn-sm" style="margin-left: 3px;"><i class="fa fa-edit"></i></a>
+                                                    {{-- <button data-toggle="tooltip" data-placement="top" title="Delete Aboutus" class="btn btn-danger btn-sm delete" data-slug="{{ $model->id }}" data-del-url="{{ route("aboutus.destroy", $model->id) }}" style="margin-left: 3px;"><i class="fa fa-trash"></i></button> --}}
+                                                </td>
                                             </tr>
                                         @endforeach
                                         <tr>

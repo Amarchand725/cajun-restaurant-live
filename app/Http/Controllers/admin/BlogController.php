@@ -66,8 +66,8 @@ class BlogController extends Controller
         try{
             if (isset($request->image)) {
                 $image = Str::random(5).date("d-m-Y-His").".".$request->file("image")->getClientOriginalExtension();
-                $request->image->move(public_path("/admin/images/blogs"),
-                $image);$input["image"] = $image;
+                $request->image->move(public_path("/admin/images/blogs"), $image);
+                $input["image"] = $image;
             }
             $input['slug'] = Str::random(5);
 	        Blog::create($input);

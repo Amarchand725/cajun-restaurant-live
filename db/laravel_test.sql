@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 04, 2023 at 11:19 AM
--- Server version: 8.0.27
+-- Generation Time: Apr 04, 2023 at 07:40 PM
+-- Server version: 5.7.36
 -- PHP Version: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `restaurant`
+-- Database: `laravel_test`
 --
 
 -- --------------------------------------------------------
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `aboutuses`;
 CREATE TABLE IF NOT EXISTS `aboutuses` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `short_description` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `about_us` text COLLATE utf8mb4_unicode_ci,
@@ -61,7 +61,7 @@ INSERT INTO `aboutuses` (`id`, `title`, `short_description`, `about_us`, `week_d
 
 DROP TABLE IF EXISTS `blogs`;
 CREATE TABLE IF NOT EXISTS `blogs` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` text COLLATE utf8mb4_unicode_ci,
@@ -90,7 +90,7 @@ INSERT INTO `blogs` (`id`, `title`, `slug`, `description`, `image`, `status`, `d
 
 DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1',
@@ -108,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
 
 DROP TABLE IF EXISTS `company_profiles`;
 CREATE TABLE IF NOT EXISTS `company_profiles` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `logo` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `footer_logo` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `favicon` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -141,7 +141,7 @@ INSERT INTO `company_profiles` (`id`, `logo`, `footer_logo`, `favicon`, `company
 
 DROP TABLE IF EXISTS `email_configs`;
 CREATE TABLE IF NOT EXISTS `email_configs` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `mail_mailer` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `mail_host` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `mail_port` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -164,7 +164,7 @@ CREATE TABLE IF NOT EXISTS `email_configs` (
 
 DROP TABLE IF EXISTS `failed_jobs`;
 CREATE TABLE IF NOT EXISTS `failed_jobs` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `uuid` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -183,7 +183,7 @@ CREATE TABLE IF NOT EXISTS `failed_jobs` (
 
 DROP TABLE IF EXISTS `foodservices`;
 CREATE TABLE IF NOT EXISTS `foodservices` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` blob NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1',
@@ -210,14 +210,29 @@ INSERT INTO `foodservices` (`id`, `title`, `image`, `status`, `deleted_at`, `cre
 
 DROP TABLE IF EXISTS `galleries`;
 CREATE TABLE IF NOT EXISTS `galleries` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `image` blob NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `galleries`
+--
+
+INSERT INTO `galleries` (`id`, `image`, `status`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 0x655064785830342d30342d323032332d3138333732392e6a7067, 1, NULL, '2023-04-04 13:37:29', '2023-04-04 13:37:29'),
+(2, 0x4f3771526330342d30342d323032332d3138333732392e6a7067, 1, NULL, '2023-04-04 13:37:29', '2023-04-04 13:37:29'),
+(3, 0x4b6e5a525830342d30342d323032332d3138333732392e6a7067, 1, NULL, '2023-04-04 13:37:29', '2023-04-04 13:37:29'),
+(4, 0x466b54335430342d30342d323032332d3138333732392e6a7067, 1, NULL, '2023-04-04 13:37:29', '2023-04-04 13:37:29'),
+(5, 0x564f374a6930342d30342d323032332d3138333732392e6a7067, 1, NULL, '2023-04-04 13:37:29', '2023-04-04 13:37:29'),
+(6, 0x354441525630342d30342d323032332d3138333732392e6a7067, 1, NULL, '2023-04-04 13:37:29', '2023-04-04 13:37:29'),
+(7, 0x786e43784330342d30342d323032332d3138333732392e6a7067, 1, NULL, '2023-04-04 13:37:29', '2023-04-04 13:37:29'),
+(8, 0x326651337530342d30342d323032332d3138333732392e6a7067, 1, NULL, '2023-04-04 13:37:29', '2023-04-04 13:37:29'),
+(9, 0x684465676530342d30342d323032332d3138333732392e6a7067, 1, NULL, '2023-04-04 13:37:29', '2023-04-04 13:37:29');
 
 -- --------------------------------------------------------
 
@@ -227,13 +242,13 @@ CREATE TABLE IF NOT EXISTS `galleries` (
 
 DROP TABLE IF EXISTS `log_activities`;
 CREATE TABLE IF NOT EXISTS `log_activities` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `subject` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `url` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `method` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `ip` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `agent` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `user_id` int DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
   `deleted_at` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -262,7 +277,7 @@ INSERT INTO `log_activities` (`id`, `subject`, `url`, `method`, `ip`, `agent`, `
 
 DROP TABLE IF EXISTS `menucategories`;
 CREATE TABLE IF NOT EXISTS `menucategories` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `start_time` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `image` blob NOT NULL,
@@ -292,9 +307,9 @@ INSERT INTO `menucategories` (`id`, `title`, `start_time`, `image`, `status`, `d
 
 DROP TABLE IF EXISTS `menus`;
 CREATE TABLE IF NOT EXISTS `menus` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `menu_of` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `parent_id` bigint DEFAULT NULL,
+  `parent_id` bigint(20) DEFAULT NULL,
   `menu` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `icon` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `label` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -327,9 +342,9 @@ INSERT INTO `menus` (`id`, `menu_of`, `parent_id`, `menu`, `icon`, `label`, `url
 
 DROP TABLE IF EXISTS `migrations`;
 CREATE TABLE IF NOT EXISTS `migrations` (
-  `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `migration` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `batch` int NOT NULL,
+  `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 
@@ -368,9 +383,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 
 DROP TABLE IF EXISTS `model_has_permissions`;
 CREATE TABLE IF NOT EXISTS `model_has_permissions` (
-  `permission_id` bigint UNSIGNED NOT NULL,
+  `permission_id` bigint(20) UNSIGNED NOT NULL,
   `model_type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `model_id` bigint UNSIGNED NOT NULL,
+  `model_id` bigint(20) UNSIGNED NOT NULL,
   PRIMARY KEY (`permission_id`,`model_id`,`model_type`),
   KEY `model_has_permissions_model_id_model_type_index` (`model_id`,`model_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
@@ -383,9 +398,9 @@ CREATE TABLE IF NOT EXISTS `model_has_permissions` (
 
 DROP TABLE IF EXISTS `model_has_roles`;
 CREATE TABLE IF NOT EXISTS `model_has_roles` (
-  `role_id` bigint UNSIGNED NOT NULL,
+  `role_id` bigint(20) UNSIGNED NOT NULL,
   `model_type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `model_id` bigint UNSIGNED NOT NULL,
+  `model_id` bigint(20) UNSIGNED NOT NULL,
   PRIMARY KEY (`role_id`,`model_id`,`model_type`),
   KEY `model_has_roles_model_id_model_type_index` (`model_id`,`model_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
@@ -409,7 +424,7 @@ CREATE TABLE IF NOT EXISTS `notifications` (
   `id` char(36) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `notifiable_type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `notifiable_id` bigint UNSIGNED NOT NULL,
+  `notifiable_id` bigint(20) UNSIGNED NOT NULL,
   `data` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `read_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -426,8 +441,8 @@ CREATE TABLE IF NOT EXISTS `notifications` (
 
 DROP TABLE IF EXISTS `ourmenus`;
 CREATE TABLE IF NOT EXISTS `ourmenus` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `menu_category_id` bigint NOT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `menu_category_id` bigint(20) NOT NULL,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -528,7 +543,7 @@ CREATE TABLE IF NOT EXISTS `password_resets` (
 
 DROP TABLE IF EXISTS `permissions`;
 CREATE TABLE IF NOT EXISTS `permissions` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `guard_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `deleted_at` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -612,9 +627,9 @@ INSERT INTO `permissions` (`id`, `name`, `guard_name`, `deleted_at`, `created_at
 
 DROP TABLE IF EXISTS `personal_access_tokens`;
 CREATE TABLE IF NOT EXISTS `personal_access_tokens` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `tokenable_type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tokenable_id` bigint UNSIGNED NOT NULL,
+  `tokenable_id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
   `abilities` text COLLATE utf8mb4_unicode_ci,
@@ -635,7 +650,7 @@ CREATE TABLE IF NOT EXISTS `personal_access_tokens` (
 
 DROP TABLE IF EXISTS `roles`;
 CREATE TABLE IF NOT EXISTS `roles` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `guard_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1',
@@ -662,8 +677,8 @@ INSERT INTO `roles` (`id`, `name`, `guard_name`, `status`, `deleted_at`, `create
 
 DROP TABLE IF EXISTS `role_has_permissions`;
 CREATE TABLE IF NOT EXISTS `role_has_permissions` (
-  `permission_id` bigint UNSIGNED NOT NULL,
-  `role_id` bigint UNSIGNED NOT NULL,
+  `permission_id` bigint(20) UNSIGNED NOT NULL,
+  `role_id` bigint(20) UNSIGNED NOT NULL,
   PRIMARY KEY (`permission_id`,`role_id`),
   KEY `role_has_permissions_role_id_foreign` (`role_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
@@ -744,7 +759,7 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 
 DROP TABLE IF EXISTS `sliders`;
 CREATE TABLE IF NOT EXISTS `sliders` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `sub_title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -772,8 +787,8 @@ INSERT INTO `sliders` (`id`, `title`, `slug`, `sub_title`, `image`, `status`, `d
 
 DROP TABLE IF EXISTS `system_settings`;
 CREATE TABLE IF NOT EXISTS `system_settings` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `per_page_record` int NOT NULL DEFAULT '10',
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `per_page_record` int(11) NOT NULL DEFAULT '10',
   `language` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `timezone` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `currency` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -790,7 +805,7 @@ CREATE TABLE IF NOT EXISTS `system_settings` (
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
@@ -821,8 +836,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `st
 
 DROP TABLE IF EXISTS `users_verify`;
 CREATE TABLE IF NOT EXISTS `users_verify` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `user_id` int NOT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
   `token` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -837,8 +852,8 @@ CREATE TABLE IF NOT EXISTS `users_verify` (
 
 DROP TABLE IF EXISTS `user_profiles`;
 CREATE TABLE IF NOT EXISTS `user_profiles` (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `user_id` int NOT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
   `first_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `last_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `avatar` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,

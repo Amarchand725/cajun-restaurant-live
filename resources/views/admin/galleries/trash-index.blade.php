@@ -48,7 +48,7 @@
                         <div class="card">
                             <!--begin::Card body-->
                             <div class="card-body pt-6">
-                                <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+                                {{-- <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                                     <!--begin::Breadcrumb-->
                                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                                         <!--begin::Item-->
@@ -59,7 +59,7 @@
                                         <!--end::Item-->
                                     </ul>
                                     <!--end::Breadcrumb-->
-                                </div>
+                                </div> --}}
                                 <!--begin::Table-->
                                 <table  class="table align-middle table-row-dashed fs-6 gy-5" id="audit-log-table">
                                     <thead>

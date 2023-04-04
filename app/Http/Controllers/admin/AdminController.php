@@ -5,6 +5,11 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Blog;
+use App\Models\Slider;
+use App\Models\Ourmenu;
+use App\Models\Foodservice;
+use App\Models\Menucategory;
 use Spatie\Permission\Models\Role;
 use App\Models\UserProfile;
 use Spatie\Permission\Models\Permission;
@@ -18,15 +23,30 @@ class AdminController extends Controller
     {
         $page_title = 'Admin Dashboard';
         $data = [];
-        $data['users'] = User::get();
-        $data['active_users'] = User::where('status', 1)->get();
-        $data['in_active_users'] = User::where('status', 0)->get();
-        $data['new_users'] = User::orderby('id', 'desc')->take(5)->get();
+        $data['blogs'] = Blog::get();
+        $data['active_blogs'] = Blog::where('status', 1)->get();
+        $data['in_active_blogs'] = Blog::where('status', 0)->get();
+        $data['new_blogs'] = Blog::orderby('id', 'desc')->take(5)->get();
 
-        $data['roles'] = Role::get();
-        $data['active_roles'] = Role::where('status', 1)->get();
-        $data['in_active_roles'] = Role::where('status', 0)->get();
-        $data['new_roles'] = Role::orderby('id', 'desc')->take(5)->get();
+        $data['sliders'] = Slider::get();
+        $data['active_sliders'] = Slider::where('status', 1)->get();
+        $data['in_active_sliders'] = Slider::where('status', 0)->get();
+        $data['new_sliders'] = Slider::orderby('id', 'desc')->take(5)->get();
+
+        $data['our_menus'] = Ourmenu::get();
+        $data['active_our_menus'] = Ourmenu::where('status', 1)->get();
+        $data['in_active_our_menus'] = Ourmenu::where('status', 0)->get();
+        $data['new_our_menus'] = Ourmenu::orderby('id', 'desc')->take(5)->get();
+
+        $data['food_services'] = Foodservice::get();
+        $data['active_food_services'] = Foodservice::where('status', 1)->get();
+        $data['in_active_food_services'] = Foodservice::where('status', 0)->get();
+        $data['new_food_services'] = Foodservice::orderby('id', 'desc')->take(5)->get();
+
+        $data['menu_categories'] = Menucategory::get();
+        $data['active_menu_categories'] = Menucategory::where('status', 1)->get();
+        $data['in_active_menu_categories'] = Menucategory::where('status', 0)->get();
+        $data['new_menu_categories'] = Menucategory::orderby('id', 'desc')->take(5)->get();
 
         return view('admin.dashboard', compact('page_title', 'data'));
     }
