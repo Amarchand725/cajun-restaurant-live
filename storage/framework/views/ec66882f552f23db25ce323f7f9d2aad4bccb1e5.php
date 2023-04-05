@@ -1,6 +1,4 @@
-@extends('frontend.layouts.app')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
     <!-- our gallery start -->
     <section class="mt-[-100px]">
         <div  class="bg-[url('public/frontend/img/gallery-bg.jpg')] bg-cover bg-center bg-no-repeat w-full lg:pt-[287px] lg:pb-[187px] h-[100vh] before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-[#0000666] before:z-[0] relative py-10">
@@ -27,7 +25,7 @@
                         <h2 class="text-[30px] lg:text-[45px] font-[400] mb-[10px] yeseva lg:w-9/12 mx-auto leading-[1.2] text-[#282828] mb-[30px]">
                             Discover Our Menu
                         </h2>
-                        <img src="{{ asset('public/frontend') }}/img/shape2.png" alt="Shape" class="mx-auto mb-[20px]">
+                        <img src="<?php echo e(asset('public/frontend')); ?>/img/shape2.png" alt="Shape" class="mx-auto mb-[20px]">
                         <p class="text-[14px] md:text-[17px] lg:text-[19px] leading-[32px] mb-[15px] text-[#9b9b9b] w-7/12 xl:pr-4 mx-auto">
                             Since our grand opening in May 1995, El Royale has won great awards from food
                             critics and organizations all over the world.
@@ -35,17 +33,19 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-12 items-center lg:gap-8 gap-5 lg:pt-8 pt-5" id="mobile" role="tab" aria-labelledby="mobile-tab">
-                    @foreach ($galleries as $gallery)
+                    <?php $__currentLoopData = $galleries; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $gallery): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="lg:col-span-4 md:col-span-6 col-span-12">
                             <div class="relative group">
-                                <a href="javascript:;" data-src="{{url('public/admin/images/galleries')}}/{{ $gallery->image }}" class="" data-fancybox="ad">
-                                    <img src="{{url('public/admin/images/galleries')}}/{{ $gallery->image }}" alt="" class="mx-auto group-hover:brightness-50 duration-700">
+                                <a href="javascript:;" data-src="<?php echo e(url('public/admin/images/galleries')); ?>/<?php echo e($gallery->image); ?>" class="" data-fancybox="ad">
+                                    <img src="<?php echo e(url('public/admin/images/galleries')); ?>/<?php echo e($gallery->image); ?>" alt="" class="mx-auto group-hover:brightness-50 duration-700">
                                 </a>
                             </div>
                         </div>
-                    @endforeach
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
             </div>
         </div>
     </section>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('frontend.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\www\cajun-restaurant\resources\views/frontend/gallery.blade.php ENDPATH**/ ?>

@@ -19,6 +19,7 @@ class WebController extends Controller
         $data['food_services'] = Foodservice::where('status', 1)->get();
         $data['menu_categories'] = Menucategory::where('status', 1)->take(2)->get();
         $data['blogs'] = Blog::where('status', 1)->get();
+        $data['about_us'] = Aboutus::orderby('id', 'desc')->where('status', 1)->first();
         return view('frontend.index', compact('data'));
     }
 
