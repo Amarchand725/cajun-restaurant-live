@@ -9,7 +9,7 @@
         <!-- Fonts -->
         <link href="<?php echo e(asset('public/frontend/css/style.css')); ?>" rel="stylesheet">
         <link href="<?php echo e(asset('public/frontend/css/fancybox.min.css')); ?>" rel="stylesheet">
-        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="<?php echo e(asset('public/frontend/css/tailwindcsss-3.3.0.css')); ?>"></script>
         <link href="<?php echo e(asset('public/frontend/css/slick.css')); ?>" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 

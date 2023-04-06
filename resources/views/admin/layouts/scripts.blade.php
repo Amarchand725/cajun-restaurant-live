@@ -3,17 +3,17 @@
 <script src="{{ asset('public/admin') }}/js/custom/widgets.js"></script>
 
 <script src="{{ asset('public/admin') }}/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
+<script src="{{ asset('public/admin/js') }}/index.js"></script>
+<script src="{{ asset('public/admin/js') }}/xy.js"></script>
+<script src="{{ asset('public/admin/js') }}/percent.js"></script>
+<script src="{{ asset('public/admin/js') }}/radar.js"></script>
+<script src="{{ asset('public/admin/js') }}/Animated.js"></script>
+<script src="{{ asset('public/admin/js') }}/map.js"></script>
+<script src="{{ asset('public/admin/js') }}worldLow.js"></script>
+<script src="{{ asset('public/admin/js') }}continentsLow.js"></script>
+<script src="{{ asset('public/admin/js') }}/usaLow.js"></script>
+<script src="{{ asset('public/admin/js') }}/worldTimeZonesLow.js"></script>
+<script src="{{ asset('public/admin/js') }}/worldTimeZoneAreasLow.js"></script>
 
 <script src="{{ asset('public/admin') }}/js/widgets.bundle.js"></script>
 
@@ -21,5 +21,5 @@
 <script src="{{asset('public/admin/js/search.js')}}"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+<script src="{{ asset('public/admin/js') }}/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('public/admin/js') }}/bootstrap-select.min.js"></script>

@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('content'); ?>
     <!-- our menu start -->
 <section class="mt-[-100px]">
