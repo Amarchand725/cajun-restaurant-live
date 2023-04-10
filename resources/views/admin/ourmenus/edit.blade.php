@@ -33,9 +33,16 @@
                         <label for="title" class="col-lg-2 col-form-label required fw-bold fs-6">Title</label><div class="col-md-6 col-sm-6"><input type="text" class="form-control form-control-lg form-control-solid" name="title" value="{{ $model->title }}" placeholder="Enter title">
                         <span style="color: red">{{ $errors->first("title") }}</span></div></div> <div class="row mb-6">
                         <label for="description" class="col-lg-2 col-form-label  fw-bold fs-6">Description</label><div class="col-md-6 col-sm-6"><input type="text" class="form-control form-control-lg form-control-solid" name="description" value="{{ $model->description }}" placeholder="Enter description">
-                        <span style="color: red">{{ $errors->first("description") }}</span></div></div> <div class="row mb-6">
-                        <label for="price" class="col-lg-2 col-form-label  fw-bold fs-6">Price</label><div class="col-md-6 col-sm-6"><input type="number" class="form-control form-control-lg form-control-solid" name="price" value="{{ $model->price }}" placeholder="Enter price">
-                        <span style="color: red">{{ $errors->first("price") }}</span></div></div> <div class="row mb-6">
+                        <span style="color: red">{{ $errors->first("description") }}</span></div></div>
+                        <div class="row mb-6">
+                            <label for="price" class="col-lg-2 col-form-label  fw-bold fs-6">Price</label>
+                            <div class="col-md-6 col-sm-6">
+                                <input type="number" class="form-control form-control-lg form-control-solid" step="0.01" name="price" value="{{ $model->price }}" placeholder="Enter price">
+                                <span style="color: red">{{ $errors->first("price") }}</span>
+                            </div>
+                        </div>
+
+                <div class="row mb-6">
                         <label for="discount_price" class="col-lg-2 col-form-label  fw-bold fs-6">Discount_price</label><div class="col-md-6 col-sm-6"><input type="number" class="form-control form-control-lg form-control-solid" name="discount_price" value="{{ $model->discount_price }}" placeholder="Enter discount_price">
                         <span style="color: red">{{ $errors->first("discount_price") }}</span></div></div> <div class="row mb-6">
                         <label for="status" class="col-lg-2 col-form-label required fw-bold fs-6">Status</label><div class="col-md-6 col-sm-6"><select class="selectpicker" name="status"><option value="1" {{ $model->status==1?"selected":"" }}>Active</option><option value="0" {{ $model->status==0?"selected":"" }}>In Active</option></select><span style="color: red">{{ $errors->first("status") }}</span></div></div>

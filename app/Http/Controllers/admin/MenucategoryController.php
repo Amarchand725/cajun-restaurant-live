@@ -110,10 +110,10 @@ class MenucategoryController extends Controller
     public function update($id, Request $request)
     {
         $model = Menucategory::findOrFail($id);
-
-        $validation = Menucategory::getValidationRules();
-        if($model->image){unset($validation["image"]);}
-	    $this->validate($request, $validation);
+        $input = $request->all();
+        // $validation = Menucategory::getValidationRules();
+        // if($model->image){unset($validation["image"]);}
+	    // $this->validate($request, $validation);
 
         try{
             $input = [];

@@ -112,7 +112,7 @@ class OurmenuController extends Controller
     {
         $model = Ourmenu::findOrFail($id);
 
-        $validation = Ourmenu::getValidationRules();
+        $validation = Ourmenu::getValidationRules($request);
 
 	    $this->validate($request, $validation);
 

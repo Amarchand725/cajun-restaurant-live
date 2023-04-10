@@ -116,10 +116,9 @@ class GalleryController extends Controller
     public function update($id, Request $request)
     {
         $model = Gallery::findOrFail($id);
-
-        $validation = Gallery::getValidationRules();
-        if($model->image){unset($validation["image"]);}
-	    $this->validate($request, $validation);
+        // $validation = Gallery::getValidationRules();
+        // $this->validate($request, $validation);
+        // if($model->image){unset($validation["image"]);}
 
         try{
             $input = [];
