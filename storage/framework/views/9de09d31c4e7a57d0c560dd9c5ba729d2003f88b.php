@@ -8,97 +8,65 @@
                     <h2
                         class="text-[45px] font-[400] mb-[10px] yeseva lg:w-9/12 mx-auto leading-[1.2] text-[#282828] mb-[30px]">
                         Discover Our Menu</h2>
-                    <img src="{{ url('frontend/img/shape2.png') }}" alt="Shape" class="mx-auto mb-[20px]">
+                    <img src="<?php echo e(url('frontend/img/shape2.png')); ?>" alt="Shape" class="mx-auto mb-[20px]">
                     <p
                         class="text-[14px] sm:text-[17px] lg:text-[19px] leading-[25px] sm:leading-[32px] mb-[15px] text-[#9b9b9b] lg:w-7/12 xl:pr-4 mx-auto">
                         Since our grand opening in May 1995, El Royale has won great awards from food
                         critics and organizations all over the world.</p>
                 </div>
                 <div class="col-span-12 mt-6">
-                    {{-- <ul class="justify-center block gap-2 sm:flex sm:flex-row  lg:gap-3 xl:mb-10  items-center rounded-[20px] sm:py-0 py-4 sm:text-center text-start mx-auto"
-                        id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
-                        <li class="relative group cursor-pointer inline-block lg:mb-0 mb-2 lg:mx-0 mx-1"
-                            role="presentation">
-                            <button
-                                class="inline-block px-3 sm:py-2 py-3 text-[13px] lg:text-[16px] w-full relative aria-selected:border-b-2 aria-selected:border-b-[#d3a971] aria-selected:text-[#d3a971] font-[700] text-[#222]"
-                                id="lunch-tab" data-tabs-target="#lunch" type="button" role="tab" aria-controls="lunch"
-                                aria-selected="true">
-                                Lunch
-                            </button>
-                        </li>
-                        <li class="relative group cursor-pointer inline-block lg:mb-0 mb-2 lg:mx-0 mx-1"
-                            role="presentation">
-                            <button
-                                class="inline-block px-3 sm:py-2 py-3 text-[13px] lg:text-[16px] w-full relative aria-selected:border-b-2 aria-selected:border-b-[#d3a971] aria-selected:text-[#d3a971] font-[700] text-[#222]"
-                                id="auto-tab" data-tabs-target="#dinner" type="button" role="tab" aria-controls="dinner"
-                                aria-selected="false">
-                                Dinner
-                            </button>
-                        </li>
-                        <li class="relative group cursor-pointer inline-block lg:mb-0 mb-2 lg:mx-0 mx-1"
-                            role="presentation">
-                            <button
-                                class="inline-block px-3 sm:py-2 py-3 text-[13px] lg:text-[16px] w-full relative aria-selected:border-b-2 aria-selected:border-b-[#d3a971] aria-selected:text-[#d3a971] font-[700] text-[#222]"
-                                id="dessert-tab" data-tabs-target="#dessert" type="button" role="tab"
-                                aria-controls="dessert" aria-selected="false">
-                                Dessert
-                            </button>
-                        </li>
-                        <li class="relative group cursor-pointer inline-block lg:mb-0 mb-2 lg:mx-0 mx-1"
-                            role="presentation">
-                            <button
-                                class="inline-block px-3 sm:py-2 py-3 text-[13px] lg:text-[16px] w-full relative aria-selected:border-b-2 aria-selected:border-b-[#d3a971] aria-selected:text-[#d3a971] font-[700] text-[#222]"
-                                id="drinks-tab" data-tabs-target="#drinks" type="button" role="tab"
-                                aria-controls="drinks" aria-selected="false">
-                                Drinks
-                            </button>
-                        </li>
-                    </ul> --}}
+                    
                     <div id="myTabContent" class="my-tabed mt-5 sm:mt-14">
                         <div class="" id="lunch" role="tabpanel" aria-labelledby="lunch-tab">
                             <div class="grid grid-cols-12 gap-x-3 lg:gap-x-8">
-                                @php $bool = true; @endphp
-                                @foreach ($data['menu_categories'] as $menu_category)
-                                    @if($bool)
-                                        @php $bool = false; @endphp
+                                <?php $bool = true; ?>
+                                <?php $__currentLoopData = $data['menu_categories']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $menu_category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <?php if($bool): ?>
+                                        <?php $bool = false; ?>
                                         <div class="col-span-12 md:col-span-6">
                                             <div class="card border border-[#d3a971] relative pt-[50px] px-[30px] sm:px-[50px] pb-[20px] mb-[30px] lg:mb-[50px] rounded-[2px] before:content-[''] before:absolute before:top-[-4px] before:right-[2px] before:left-[-3px] before:bottom-0 before:h-full before:block before:rounded-[2px] before:border before:border-[#d3a971] ">
-                                                @foreach ($menu_category->haveOurMenus as $our_menu)
+                                                <?php $__currentLoopData = $menu_category->haveOurMenus; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $our_menu): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                     <div class="content relative border-b border-dashed border-[#dbdbdb] pb-[16px] mb-[20px]">
                                                         <h4 class="inline-block mr-[10px] text-[18px] lg:text-[21px] mb-[7px] text-[#282828] font-[600] leading-[1.2]">
-                                                            {{ $our_menu->title }}
+                                                            <?php echo e($our_menu->title); ?>
+
                                                         </h4>
                                                         <span class="absolute top-0 right-0 block min-w-[50px] text-right text-[30px] lg:text-[40px] kristi text-[#d3a971] leading-[1]">
-                                                            ${{ $our_menu->price }}
+                                                            $<?php echo e($our_menu->price); ?>
+
                                                         </span>
                                                         <p class="text-[14px] lg:text-[18px] text-[#9b9b9b] leading-[24px]">
-                                                            {{ $our_menu->description }}
+                                                            <?php echo e($our_menu->description); ?>
+
                                                         </p>
                                                     </div>
-                                                @endforeach
+                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                             </div>
                                         </div>
-                                    @else
-                                        @php $bool = true; @endphp
+                                    <?php else: ?>
+                                        <?php $bool = true; ?>
                                         <div class="col-span-12 md:col-span-6">
                                             <div class="card border border-[#d3a971] relative pt-[50px] px-[30px] sm:px-[50px] pb-[20px] mb-[30px] lg:mb-[50px] rounded-[2px] before:content-[''] before:absolute before:top-[-4px] before:right-[2px] before:left-[3px] before:bottom-0 before:h-full before:block before:rounded-[2px] before:border before:border-[#d3a971]">
-                                                @foreach ($menu_category->haveOurMenus as $our_menu)
+                                                <?php $__currentLoopData = $menu_category->haveOurMenus; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $our_menu): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                     <div class="content relative border-b border-dashed border-[#dbdbdb] pb-[16px] mb-[20px]">
                                                         <h4 class="inline-block mr-[10px] text-[18px] lg:text-[21px] mb-[7px] text-[#282828] font-[600] leading-[1.2]">
-                                                            {{ $our_menu->title }}
+                                                            <?php echo e($our_menu->title); ?>
+
                                                         </h4>
                                                         <span class="absolute top-0 right-0 block min-w-[50px] text-right text-[30px] lg:text-[40px] kristi text-[#d3a971] leading-[1]">
-                                                            ${{ $our_menu->price }}
+                                                            $<?php echo e($our_menu->price); ?>
+
                                                         </span>
                                                         <p class="text-[14px] lg:text-[18px] text-[#9b9b9b] leading-[24px]">
-                                                            {{ $our_menu->description }}
+                                                            <?php echo e($our_menu->description); ?>
+
                                                         </p>
                                                     </div>
-                                                @endforeach
+                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                             </div>
                                         </div>
-                                    @endif
-                                @endforeach
+                                    <?php endif; ?>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </div>
                         </div>
                     </div>
@@ -115,3 +83,4 @@
         </div>
     </div>
 </section>
+<?php /**PATH C:\xampp\htdocs\cajun-restaurant-live\resources\views/frontend/layouts/discover-menu.blade.php ENDPATH**/ ?>

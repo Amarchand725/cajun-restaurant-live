@@ -45,7 +45,7 @@
                                 <div class="img mb-[30px] relative before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-[#00000066] before:z-[1]">
                                     <img src="{{ asset('public/admin/images/blogs') }}/{{ $blog->image }}" alt="" class="w-full">
                                 </div>
-                                <div class="txt pl-[30px] pr-[15px]">
+                                <div class="txt pl-[20px] sm:pl-[30px] pr-[10px] sm:pr-[15px]">
                                     <div class="meta mb-[11px]">
                                         <a href="javascript:;"
                                             class="bg-[#d3a971] text-white text-[15px] leading-[30px] px-[10px] py-[3px] rounded-[3px] mr-[4px]">

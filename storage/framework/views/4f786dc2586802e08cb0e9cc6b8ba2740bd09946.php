@@ -1,26 +1,27 @@
-<section class="event-sec py-[100px]">
-    <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-12 gap-x-8">
+<section class="event-sec py-[40px] lg:py-[100px]">
+    <div class="max-w-7xl mx-auto xl:px-0 lg:px-3 px-4">
+        <div class="grid grid-cols-12 gap-y-5 lg:gap-x-8">
             <div class="col-span-12">
                 <div class="txt text-center mb-[25px] lg:mb-[75px]">
-                    <p class="text-[40px] xl:text-[50px] text-[#d3a971] block mb-[8px] leading-[1] kristi">Don’t Miss
+                    <p class="text-[30px] md:text-[40px] xl:text-[50px] text-[#d3a971] block mb-[8px] leading-[1] kristi">Don’t Miss
                     </p>
                     <h2
-                        class="text-[45px] font-[400] mb-[10px] yeseva lg:w-9/12 mx-auto leading-[1.2] text-[#282828] mb-[30px]">
+                        class="text-[35px] md:text-[45px] font-[400] mb-[10px] yeseva lg:w-9/12 mx-auto leading-[1.2] text-[#282828] mb-[30px]">
                         Our News & Events</h2>
-                    <img src="<?php echo e(asset('/public/frontend/img/shape2.png')); ?>" alt="Shape" class="mx-auto mb-[20px]">
+                    <img src="<?php echo e(url('frontend/img/shape2.png')); ?>" alt="Shape" class="mx-auto mb-[20px]">
                     <p
-                        class="text-[14px] sm:text-[17px] lg:text-[19px] leading-[32px] mb-[15px] text-[#9b9b9b] w-7/12 xl:pr-4 mx-auto">
+                        class="text-[14px] sm:text-[17px] lg:text-[19px] leading-[28px] sm:leading-[32px] mb-[15px] text-[#9b9b9b] lg:w-7/12 xl:pr-4 mx-auto">
                         Since our grand opening in May 1995, El Royale has won great awards from food critics and
                         organizations all over the world.</p>
                 </div>
             </div>
 
             <?php $__currentLoopData = $data['blogs']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <div class="col-span-4">
+                <div class="col-span-12 lg:col-span-4">
                     <div class="card">
                         <div class="img mb-[30px] relative before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-[#00000066] before:z-[1]">
-                            <img src="<?php echo e(asset('public/admin/images/blogs')); ?>/<?php echo e($blog->image); ?>" alt="" class="w-full">
+                            <!-- <img src="<?php echo e(asset('public/admin/images/blogs')); ?>/<?php echo e($blog->image); ?>" alt="" class="w-full"> -->
+                            <img src="<?php echo e(url('frontend/img/miss1.jpg')); ?>" alt="" class="w-full">
                         </div>
                         <div class="txt pl-[20px] sm:pl-[30px] pr-[10px] sm:pr-[15px]">
                             <div class="meta mb-[11px]">
@@ -50,4 +51,4 @@
         </div>
     </div>
 </section>
-<?php /**PATH C:\wamp64\www\cajun-restaurant\resources\views/frontend/layouts/blog.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\xampp\htdocs\cajun-restaurant-live\resources\views/frontend/layouts/blog.blade.php ENDPATH**/ ?>

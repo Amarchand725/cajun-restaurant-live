@@ -4,9 +4,9 @@
                 <div class="grid grid-cols-12 lgap-y-8 lg:gap-x-8">
                     <div class="col-span-12 lg:col-span-5">
                         <div class="card relative">
-                            <!-- <img src="{{ asset('public/frontend') }}/img/card-bg.jpg" alt="Card"
+                            <!-- <img src="<?php echo e(asset('public/frontend')); ?>/img/card-bg.jpg" alt="Card"
                                 class="h-full w-full absolute top-0 left-0 z-[0]"> -->
-                                <img src="{{url('/frontend/img/card-bg.jpg')}}" alt="Card"
+                                <img src="<?php echo e(url('/frontend/img/card-bg.jpg')); ?>" alt="Card"
                                     class="h-full w-full absolute top-0 left-0 z-[0]">
                             <div class="txt text-center pt-[75px] px-[50px] pb-[70px] relative z-[99999]">
                                 <span class="text-[35px] text-[#d3a971] kristi block leading-[1.5]">Check Availability</span>
@@ -16,22 +16,23 @@
                                     <li
                                         class="flex items-center justify-between leading-[40px] xl:leading-[50px] pt-[6px] border-b-[1px] border-dashed border-[#494b4f]">
                                         <span class="leading-[40px] text-[#9b9b9b] text-[17px] font-[400]">Week days</span>
-                                        <span class="leading-[40px] text-[#9b9b9b] text-[17px] font-[400]">{{ $data['about_us']->week_days_timing }}</span>
+                                        <span class="leading-[40px] text-[#9b9b9b] text-[17px] font-[400]"><?php echo e($data['about_us']->week_days_timing); ?></span>
                                     </li>
                                     <li
                                         class="flex items-center justify-between leading-[40px] xl:leading-[50px] pt-[6px] border-b-[1px] border-dashed border-[#494b4f]">
                                         <span class="leading-[40px] text-[#9b9b9b] text-[17px] font-[400]">Saturday</span>
-                                        <span class="leading-[40px] text-[#9b9b9b] text-[17px] font-[400]">{{ $data['about_us']->saturday_timing }}</span>
+                                        <span class="leading-[40px] text-[#9b9b9b] text-[17px] font-[400]"><?php echo e($data['about_us']->saturday_timing); ?></span>
                                     </li>
                                     <li class="flex items-center justify-between leading-[40px] xl:leading-[50px] pt-[6px]">
                                         <span class="leading-[40px] text-[#9b9b9b] text-[17px] font-[400]">Saturday</span>
-                                        <span class="leading-[40px] text-[#9b9b9b] text-[17px] font-[400]">{{ $data['about_us']->sunday_timing }}</span>
+                                        <span class="leading-[40px] text-[#9b9b9b] text-[17px] font-[400]"><?php echo e($data['about_us']->sunday_timing); ?></span>
                                     </li>
                                 </ul>
                                 <div class="call">
                                     <span class="text-[35px] text-[#d3a971] kristi block leading-[1.5]">Call Us Now</span>
                                     <a href="tel:;" class="text-white text-[24px] lg:text-[32px] font-[400] block yeseva mb-[6px] xl:mb-[45px] leading-[1.2]">
-                                        {{ $data['about_us']->call_now }}
+                                        <?php echo e($data['about_us']->call_now); ?>
+
                                     </a>
                                 </div>
                             </div>
@@ -114,3 +115,4 @@
                 </div>
             </div>
         </section>
+<?php /**PATH C:\xampp\htdocs\cajun-restaurant-live\resources\views/frontend/layouts/availability.blade.php ENDPATH**/ ?>

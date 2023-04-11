@@ -5,17 +5,17 @@
                 <div class="grid grid-cols-12 items-center">
                     <div class="col-span-2 xl:col-span-3">
                         <div class="logo">
-                            <!-- @php
+                            <!-- <?php
                                 $logo = url('frontend/cajun-logo.png');
-                            @endphp
-                            @if(!empty(companyProfile()) && companyProfile()->logo)
-                                @php
+                            ?>
+                            <?php if(!empty(companyProfile()) && companyProfile()->logo): ?>
+                                <?php
                                     $logo = url('frontend').'/'.companyProfile()->logo;
-                                @endphp
-                            @endif -->
-                            <a href="{{ route('home') }}">
-                                <!-- <img loading="lazy" src="{{ $logo }}" height="46" width="196" alt="" /> -->
-                                <img loading="lazy" src="{{ url('frontend') }}/img/cajun-logo.png" height="" width=""
+                                ?>
+                            <?php endif; ?> -->
+                            <a href="<?php echo e(route('home')); ?>">
+                                <!-- <img loading="lazy" src="<?php echo e($logo); ?>" height="46" width="196" alt="" /> -->
+                                <img loading="lazy" src="<?php echo e(url('frontend')); ?>/img/cajun-logo.png" height="" width=""
                                     alt="" class="w-8/12 lg:w-4/12"/>
                             </a>
                         </div>
@@ -24,7 +24,7 @@
                         <ul class="flex flex-col sm:flex-row items-center justify-end gap-x-2 lg:gap-x-4 xl:gap-x-7">
                             <li class="relative group">
                                 <div>
-                                    <a href="{{ route('home') }}" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
+                                    <a href="<?php echo e(route('home')); ?>" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
                                         <span class="text-white hover:text-[#d3a971] uppercase">
                                         Home 
                                         </span>
@@ -33,7 +33,7 @@
                             </li>
                             <li class="relative group">
                                 <div>
-                                    <a href="{{ route('about') }}" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
+                                    <a href="<?php echo e(route('about')); ?>" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
                                         <span class="text-white hover:text-[#d3a971] uppercase">
                                         Our story
                                         </span>
@@ -42,7 +42,7 @@
                             </li>
                             <li class="relative group">
                                 <div>
-                                    <a href="{{ route('discover-menu') }}" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
+                                    <a href="<?php echo e(route('discover-menu')); ?>" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
                                         <span class="text-white hover:text-[#d3a971] uppercase">
                                         Menu
                                         </span>
@@ -51,7 +51,7 @@
                             </li>
                             <li class="relative group">
                                 <div>
-                                    <a href="{{ route('our-gallery') }}" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
+                                    <a href="<?php echo e(route('our-gallery')); ?>" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
                                         <span class="text-white hover:text-[#d3a971] uppercase">
                                         Gallery
                                         </span>
@@ -60,7 +60,7 @@
                             </li>
                             <li class="relative group">
                                 <div>
-                                    <a href="{{ route('our-blog') }}" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
+                                    <a href="<?php echo e(route('our-blog')); ?>" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
                                         <span class="text-white hover:text-[#d3a971] uppercase">
                                         Blog
                                         </span>
@@ -117,7 +117,7 @@
                                     </button>
                                     <div class="grid grid-cols-2 gap-4">
                                         <div class="col-span-12">
-                                            <img src="{{ url('frontend') }}/img/footer-logo.png" alt="LOGO"
+                                            <img src="<?php echo e(url('frontend')); ?>/img/footer-logo.png" alt="LOGO"
                                                 class="mx-auto mb-6" />
                                             <div class="txt">
                                                 <p
@@ -169,8 +169,8 @@
                     <div class="col-span-11">
                         <div class="md:col-span-3 col-span-12">
                             <div class="world-logo">
-                                <!-- <img class="inline w-[250px] h-[45px]" src="{{ $logo }}" alt="..."> -->
-                                <img loading="lazy" src="{{ url('frontend') }}/img/cajun-logo.png" height="" width=""
+                                <!-- <img class="inline w-[250px] h-[45px]" src="<?php echo e($logo); ?>" alt="..."> -->
+                                <img loading="lazy" src="<?php echo e(url('frontend')); ?>/img/cajun-logo.png" height="" width=""
                                     alt="" class="inline w-[150px] h-[65px]"/>
                             </div>
                         </div>
@@ -196,7 +196,7 @@
                                 <ul class="">
                                     <li class="relative group mb-3">
                                         <div>
-                                            <a href="{{ route('home') }}" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
+                                            <a href="<?php echo e(route('home')); ?>" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
                                                 <span class="text-black hover:text-[#d3a971] uppercase">
                                                 Home 
                                                 </span>
@@ -205,7 +205,7 @@
                                     </li>
                                     <li class="relative group mb-3">
                                         <div>
-                                            <a href="{{ route('about') }}" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
+                                            <a href="<?php echo e(route('about')); ?>" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
                                                 <span class="text-black hover:text-[#d3a971] uppercase">
                                                 Our story
                                                 </span>
@@ -214,7 +214,7 @@
                                     </li>
                                     <li class="relative group mb-3">
                                         <div>
-                                            <a href="{{ route('discover-menu') }}" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
+                                            <a href="<?php echo e(route('discover-menu')); ?>" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
                                                 <span class="text-black hover:text-[#d3a971] uppercase">
                                                 Menu
                                                 </span>
@@ -223,7 +223,7 @@
                                     </li>
                                     <li class="relative group mb-3">
                                         <div>
-                                            <a href="{{ route('our-gallery') }}" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
+                                            <a href="<?php echo e(route('our-gallery')); ?>" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
                                                 <span class="text-black hover:text-[#d3a971] uppercase">
                                                 Gallery
                                                 </span>
@@ -232,7 +232,7 @@
                                     </li>
                                     <li class="relative group mb-3">
                                         <div>
-                                            <a href="{{ route('our-blog') }}" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
+                                            <a href="<?php echo e(route('our-blog')); ?>" class="text-[13px] lg:text-[16px] font-[600] tracking-[0.6px]">
                                                 <span class="text-black hover:text-[#d3a971] uppercase">
                                                 Blog
                                                 </span>
@@ -257,3 +257,4 @@
         </div>
     </nav>
 </header>
+<?php /**PATH C:\xampp\htdocs\cajun-restaurant-live\resources\views/frontend/layouts/header.blade.php ENDPATH**/ ?>

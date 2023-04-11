@@ -1,8 +1,8 @@
-@extends('frontend.layouts.app')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
     <!-- slider section start -->
-    @include('frontend.layouts.slider')
+    <?php echo $__env->make('frontend.layouts.slider', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <!-- slider section end  -->
 
     <!-- welcome start -->
@@ -17,26 +17,27 @@
                         <h1 class="text-[35px] md:text-[45px] font-[400] mb-[10px] yeseva lg:w-9/12 mx-auto leading-[1.2] text-[#282828] mb-[30px]">
                             Delicious Food, Friendly Staff, Cozy Atmosphere & Positive Emotions!
                         </h1>
-                        <img src="{{ url('/frontend') }}/img/shape2.png" alt="Shape" class="mx-auto">
+                        <img src="<?php echo e(url('/frontend')); ?>/img/shape2.png" alt="Shape" class="mx-auto">
                     </div>
                 </div>
 
-                @foreach ($data['food_services'] as $food_service)
+                <?php $__currentLoopData = $data['food_services']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $food_service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-span-12 md:col-span-4 mb-[30px]">
                         <div class="card relative overflow-hidden z-0 group">
                             <div class="img before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-[#00000066] before:z-[1]">
-                                <!-- <img src="{{ asset('frontend/img/foodservices') }}/{{ $food_service->image }}" alt="Card" class="group-hover:scale-[1.1] duration-700 group-hover:duration-700"> -->
-                                <img src="{{url('frontend/img/card1.jpg')}}" alt="Card"
+                                <!-- <img src="<?php echo e(asset('frontend/img/foodservices')); ?>/<?php echo e($food_service->image); ?>" alt="Card" class="group-hover:scale-[1.1] duration-700 group-hover:duration-700"> -->
+                                <img src="<?php echo e(url('frontend/img/card1.jpg')); ?>" alt="Card"
                             class="group-hover:scale-[1.1] duration-700 group-hover:duration-700">
                             </div>
                             <div class="txt">
                                 <p class="text-white text-[35px] xl:text-[45px] font-[400] absolute bottom-[30px] left-0 w-full text-center z-[3] kristi">
-                                    {{ $food_service->title }}
+                                    <?php echo e($food_service->title); ?>
+
                                 </p>
                             </div>
                         </div>
                     </div>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                 <div class="col-span-12">
                     <div class="txt text-center">
@@ -72,7 +73,7 @@
                             We have awesome recipes and the most talented chefs in town!</p>
                     </div>
                     <div class="flex flex-wrap items-center justify-center gap-x-4 relative z-[99999]">
-                        <img src="{{ url('frontend') }}/img/signature2.png" alt="Signature" class="">
+                        <img src="<?php echo e(url('frontend')); ?>/img/signature2.png" alt="Signature" class="">
                         <div class="btn">
                             <a href="javascript:;"
                                 class="bg-white block text-[#282828] shadow-md text-[13px] sm:text-[16px] font-[700] min-w-[190px] sm:min-w-[200px] h-[50px] sm:h-[60px] leading-[50px] sm:leading-[58px] text-center px-[10px] rounded-[2px] tracking-[1.3] hover:bg-[#d3a971] hover:text-white pointer duration-[700] hover:duration-[700]"
@@ -88,11 +89,11 @@
     <!-- delicious end -->
 
     <!-- Favourites start -->
-    @include('frontend.layouts.discover-menu')
+    <?php echo $__env->make('frontend.layouts.discover-menu', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <!-- Favourites end -->
 
     <!-- People talk start-->
-    {{-- @include('frontend.layouts.testimonial') --}}
+    
     <!-- People talk end-->
 
     <section class="py-[40px] lg:py-[100px]">
@@ -100,8 +101,8 @@
             <div class="grid grid-cols-12 lg:gap-x-7 items-center">
                 <div class="col-span-12 gap-y-5 lg:col-span-8">
                     <div class="img flex items-center sm:gap-x-3 lg:gap-x-10">
-                        <img src="{{ asset('frontend') }}/img/event-1.jpg" alt="" class="h-full w-full sm:w-[50%] lg:w-full">
-                        <img src="{{ asset('frontend') }}/img/event-2.jpg" alt="" class="sm:block hidden w-[50%] h-full lg:w-full lg:mt-16">
+                        <img src="<?php echo e(asset('frontend')); ?>/img/event-1.jpg" alt="" class="h-full w-full sm:w-[50%] lg:w-full">
+                        <img src="<?php echo e(asset('frontend')); ?>/img/event-2.jpg" alt="" class="sm:block hidden w-[50%] h-full lg:w-full lg:mt-16">
                     </div>
                 </div>
                 <div class="col-span-12 lg:col-span-4">
@@ -110,8 +111,8 @@
                             Event</p>
                         <h2 class="text-[35px] md:text-[40px] font-[400] mb-[10px] yeseva mx-auto leading-[1.2] text-[#282828] mb-[30px]">
                             A warm & Friendly Atmosphere </h2>
-                        <!-- <img src="{{ asset('/public/frontend/img/shape2.png') }}" alt="Shape" class="mx-auto mb-[20px]"> -->
-                        <img src="{{ url('frontend/img/shape2.png') }}" alt="Shape" class="mx-auto mb-[20px]">
+                        <!-- <img src="<?php echo e(asset('/public/frontend/img/shape2.png')); ?>" alt="Shape" class="mx-auto mb-[20px]"> -->
+                        <img src="<?php echo e(url('frontend/img/shape2.png')); ?>" alt="Shape" class="mx-auto mb-[20px]">
                         <p
                             class="text-[14px] sm:text-[17px] lg:text-[18px] leading-[28px] sm:leading-[32px] mb-[15px] text-[#9b9b9b] mb-[30px]">
                             Allow us to make your next special event extra special. We cater for all sized
@@ -128,10 +129,12 @@
     <!-- event end  -->
 
     <!-- availibility start -->
-    @include('frontend.layouts.availability')
+    <?php echo $__env->make('frontend.layouts.availability', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <!-- availibility end -->
 
     <!-- News Events -->
-    @include('frontend.layouts.blog')
+    <?php echo $__env->make('frontend.layouts.blog', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <!-- event end -->
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('frontend.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\cajun-restaurant-live\resources\views/frontend/index.blade.php ENDPATH**/ ?>

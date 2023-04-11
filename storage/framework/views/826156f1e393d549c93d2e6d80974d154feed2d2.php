@@ -96,7 +96,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-12 gap-x-7 items-center">
                 <div class="col-span-8">
-                    <div class="img flex items-center gap-x-10">
+                    <div class="img flex items-center lg:gap-x-10">
                         <img src="<?php echo e(asset('public/frontend')); ?>/img/event-1.jpg" alt="" class="h-full w-full">
                         <img src="<?php echo e(asset('public/frontend')); ?>/img/event-2.jpg" alt="" class="h-full w-full mt-16">
                     </div>

@@ -1,6 +1,6 @@
 <section class="banner-sec lg:mt-[-100px]">
     <div class="slider1 relative w-full z-0">
-        @foreach ($data['sliders'] as $slider)
+        <?php $__currentLoopData = $data['sliders']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slider): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <div class="">
                 <div class="grid grid-cols-12">
                     <div class="col-span-12">
@@ -9,10 +9,12 @@
                                 <div class="max-w-7xl mx-auto xl:px-0 lg:px-3 px-4">
                                     <div class="txt">
                                         <h2 class="text-[35px] md:text-[50px] xl:text-[85px] font-[400] text-white text-center yeseva lg:w-9/12 mx-auto leading-[1.2]">
-                                            {{ $slider->title }}
+                                            <?php echo e($slider->title); ?>
+
                                         </h2>
                                         <p class="text-[16px] sm:text-[25px] lg:text-[35px] xl:text-[50px] text-white mb-[30px] kristi text-center">
-                                            {{ $slider->sub_title }}
+                                            <?php echo e($slider->sub_title); ?>
+
                                         </p>
                                     </div>
                                     <div class="btn flex flex-wrap items-center justify-center gap-y-4 sm:gap-x-4">
@@ -31,6 +33,7 @@
                     </div>
                 </div>
         </div>
-        @endforeach 
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?> 
     </div>
 </section>
+<?php /**PATH C:\xampp\htdocs\cajun-restaurant-live\resources\views/frontend/layouts/slider.blade.php ENDPATH**/ ?>

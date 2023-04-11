@@ -2,7 +2,7 @@
 
 <?php $__env->startSection('content'); ?>
     <!-- banner start -->
-    <section class="mt-[-100px]">
+    <section class="lg:mt-[-100px]">
         <div
             class="banner bg-[url('public/frontend/img/about-banner.jpg')] bg-cover bg-center bg-no-repeat w-full lg:pt-80 pt-10 pb-3">
             <h3 class="text-[#f9f9f9] text-center lg:text-[40px] md:text-[35px] text-[30px] kristi mb-[3px]">
@@ -136,10 +136,10 @@
 
     <!-- event start -->
     <section class="py-[100px]">
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto xl:px-0 lg:px-3 px-4">
             <div class="grid grid-cols-12 gap-x-7 items-center">
                 <div class="col-span-8">
-                    <div class="img flex items-center gap-x-10">
+                    <div class="img flex items-center lg:gap-x-10">
                         <img src="<?php echo e(url('public/frontend/img/event-1.jpg')); ?>" alt="" class="h-full w-full">
                         <img src="<?php echo e(url('public/frontend/img/event-2.jpg')); ?>" alt="" class="h-full w-full mt-16">
                     </div>

@@ -119,7 +119,7 @@
     <section class="">
         <div class="take-a-taste">
             <div
-                class="bg-[url('public/frontend/img/take-a-taste-image.jpg')] bg-cover bg-center bg-no-repeat w-full lg:py-[105px] py-10 ">
+                class="bg-[url('/frontend/img/take-a-taste-image.jpg')] bg-cover bg-center bg-no-repeat w-full lg:py-[105px] py-10 ">
                 <h4 class="kristi lg:text-[40px] md:text-[35px] text-[30px] mb-[10px] text-[#fff] text-center">
                     We Create Delicious Memories
                 </h4>
@@ -135,19 +135,20 @@
     <section class="py-[100px]">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-12 gap-x-7 items-center">
-                <div class="col-span-8">
-                    <div class="img flex items-center gap-x-10">
-                        <img src="{{url('public/frontend/img/event-1.jpg')}}" alt="" class="h-full w-full">
-                        <img src="{{url('public/frontend/img/event-2.jpg')}}" alt="" class="h-full w-full mt-16">
+                <div class="col-span-12 lg:col-span-8">
+                    <div class="img flex items-center lg:gap-x-10">
+                        <img src="{{url('frontend/img/event-1.jpg')}}" alt="" class="h-full w-full">
+                        <img src="{{url('frontend/img/event-2.jpg')}}" alt="" class="h-full w-full mt-16">
                     </div>
                 </div>
-                <div class="col-span-4">
+                <div class="col-span-12 lg:col-span-4">
                     <div class="txt text-center">
                         <p class="text-[40px] xl:text-[50px] text-[#d3a971] block mb-[8px] leading-[1] kristi">Host Your
                             Event</p>
                         <h2 class="text-[40px] font-[400] mb-[10px] yeseva mx-auto leading-[1.2] text-[#282828] mb-[30px]">
                             A warm & Friendly Atmosphere </h2>
-                        <img src="{{ asset('public/frontend') }}/img/shape2.png" alt="Shape" class="mx-auto mb-[20px]">
+                        <!-- <img src="{{ url('frontend') }}/img/shape2.png" alt="Shape" class="mx-auto mb-[20px]"> -->
+                        <img src="{{ url('frontend/img/shape2.png') }}" alt="Shape" class="mx-auto mb-[20px]">
                         <p
                             class="text-[14px] sm:text-[17px] lg:text-[18px] leading-[32px] mb-[15px] text-[#9b9b9b] mb-[30px]">
                             Allow us to make your next special event extra special. We cater for all sized

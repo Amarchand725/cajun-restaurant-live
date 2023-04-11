@@ -4,7 +4,7 @@
     <!-- our menu start -->
     <section class="mt-[-100px]">
         <div
-            class="bg-[url('public/frontend/img/our-menu-bg.jpg')] bg-cover h-[100vh] bg-no-repeat before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-[#0000666] before:z-[0] relative w-full flex flex-col items-center justify-center py-10">
+            class="bg-[url('frontend/img/our-menu-bg.jpg')] bg-cover h-[100vh] bg-no-repeat before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-[#0000666] before:z-[0] relative w-full flex flex-col items-center justify-center py-10">
             <div class="txt">
             <h4 class="relative z-[999999] pt-[110px] kristi text-center lg:text-[45px] md:text-[35px] text-[30px] text-[#f9f9f9] mb-3">
                 Discover
@@ -30,7 +30,7 @@
                         <h1 class="yeseva sm:text-[37px] text-[25px] font-[400] mb-[10px] text-center leadin g-[1.2] text-[#282827]">
                             Discover Our Menu
                         </h1>
-                        <img src="{{url('public/frontend/img/heading-icon.png')}}" alt="" class="mx-auto mb-[20px]">
+                        <img src="{{url('frontend/img/heading-icon.png')}}" alt="" class="mx-auto mb-[20px]">
                         <p class="text-[14px] leading-[24px] font-[400] text-center text-[#9b9b9b] lg:w-6/12 w-full mx-auto">
                             Even if you're not a great chef, there's nothing to stop you understanding the
                             difference between what tastes good and what doesn't.
@@ -46,7 +46,7 @@
         <!-- breakfast menu start -->
         <section class="">
             <div class="breakfast-menu">
-                <div class="bg-[url('public/admin/images/menucategories/{{ $menu_category->image }}')] h-[70vh] bg-cover bg-center bg-fixed bg-no-repeat w-full lg:pt-[125px] lg:pb-[105] py-10 before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-[#00000066] before:z-[0] relative">
+                <div class="bg-[url('frontend/img/menucategories/{{ $menu_category->image }}')] h-[70vh] bg-cover bg-center bg-fixed bg-no-repeat w-full lg:pt-[125px] lg:pb-[105] py-10 before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-[#00000066] before:z-[0] relative">
                     <div class="txt text-center relative z-[99999]">
                     <h4 class="kristi lg:text-[40px] md:text-[35px] text-[30px] mb-[10px] text-[#fff] text-center">
                         @if(!empty($menu_category->start_time))
