@@ -3613,7 +3613,7 @@ reference element's position.
 
     var tabs_Default = {
         defaultTabId: null,
-        activeClasses: "text-white border-white",
+        activeClasses: "text-[#d3a971] border-b-[#d3a971] border-b",
         inactiveClasses: "text-[#222E3A] dark:text-white",
         onShow: function onShow() {},
     };

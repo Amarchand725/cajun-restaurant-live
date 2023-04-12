@@ -1,4 +1,4 @@
-<section class="banner-sec lg:mt-[-100px]">
+<section class="banner-sec md:mt-[-100px]">
     <div class="slider1 relative w-full z-0">
         @foreach ($data['sliders'] as $slider)
               <div class="">
@@ -15,7 +15,7 @@
                                             {{ $slider->sub_title }}
                                         </p>
                                     </div>
-                                    <div class="btn flex flex-wrap items-center justify-center gap-y-4 sm:gap-x-4">
+                                    <div class="btn flex flex-wrap items-center justify-center gap-y-4 gap-x-4">
                                         <a href="javascript:;"
                                             class="bg-[#d3a971] text-white shadow-md text-[16px] font-[700] min-w-[170px] h-[50px] leading-[48px] text-center px-[10px] rounded-[2px] tracking-[1.3] hover:bg-[#282828] pointer duration-[700] hover:duration-[700]">
                                             View Menu

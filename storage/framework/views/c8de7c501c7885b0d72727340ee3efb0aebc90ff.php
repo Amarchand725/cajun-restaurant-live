@@ -1,6 +1,6 @@
-@extends("frontend.layouts.app")
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
     <!-- banner section -->
     <section class="md:mt-[-100px]">
         <div
@@ -24,7 +24,7 @@
             <div class="grid grid-cols-12 gap-y-8 sm:gap-x-8">
                 <div class="col-span-12 sm:col-span-5">
                     <div class="card relative">
-                        <img src="{{url('frontend/img/card-bg.jpg')}}" alt="Card"
+                        <img src="<?php echo e(url('frontend/img/card-bg.jpg')); ?>" alt="Card"
                             class="h-full w-full absolute top-0 left-0 z-[0]">
                         <div class="txt text-center pt-[75px] px-[50px] sm:px-[25px] lg:px-[50px] pb-[70px] relative z-[99999]">
                             <span class="text-[20px] lg:text-[35px] text-[#d3a971] kristi block leading-[1.5]">Check Availability</span>
@@ -146,7 +146,7 @@
                         </h3>
                         <h1 class="yeseva lg:text-[50px] sm:text-[37px] text-[25px] font-[400] mb-[10px] text-center leading-[1] text-[#282827]">
                             Our Awrads</h1>
-                        <img src="{{url('frontend/img/heading-icon.png')}}" alt="" class="mx-auto mb-[20px]">
+                        <img src="<?php echo e(url('frontend/img/heading-icon.png')); ?>" alt="" class="mx-auto mb-[20px]">
                         <p class="text-[14px] leading-[24px] font-[400] text-center text-[#9b9b9b] lg:w-6/12 w-full mx-auto">
                             Since our grand opening in May 1995, El Royale has won great awards from food critics and organizations all over the world.</p>
                     </div>
@@ -157,28 +157,28 @@
                     <div class="col-span-12">
                         <div class="award-slider">
                             <div class="sm:mx-0 mx-2">
-                                <img src="{{url('frontend/img/slider-6.png')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/slider-6.png')); ?>" alt="" class="">
                             </div>
                             <div class="sm:mx-0 mx-2">
-                                <img src="{{url('frontend/img/slider-5.png')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/slider-5.png')); ?>" alt="" class="">
                             </div>
                             <div class="sm:mx-0 mx-2">
-                                <img src="{{url('frontend/img/slider-4.png')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/slider-4.png')); ?>" alt="" class="">
                             </div>
                             <div class="sm:mx-0 mx-2">
-                                <img src="{{url('frontend/img/slider-3.png')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/slider-3.png')); ?>" alt="" class="">
                             </div>
                             <div class="sm:mx-0 mx-2">
-                                <img src="{{url('frontend/img/slider-1.png')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/slider-1.png')); ?>" alt="" class="">
                             </div>
                             <div class="sm:mx-0 mx-2">
-                                <img src="{{url('frontend/img/slider-2.png')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/slider-2.png')); ?>" alt="" class="">
                             </div>
                             <div class="sm:mx-0 mx-2">
-                                <img src="{{url('frontend/img/slider-6.png')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/slider-6.png')); ?>" alt="" class="">
                             </div>
                             <div class="sm:mx-0 mx-2">
-                                <img src="{{url('frontend/img/slider-4.png')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/slider-4.png')); ?>" alt="" class="">
                             </div>
                         </div>
                     </div>
@@ -229,4 +229,6 @@
         </div>
     </section>
     <!-- Excellene end -->
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make("frontend.layouts.app", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\cajun-restaurant-live\resources\views/frontend/reservation.blade.php ENDPATH**/ ?>

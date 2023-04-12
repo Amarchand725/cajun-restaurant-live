@@ -1,6 +1,6 @@
 <section
-            class="availibility-sec bg-[url('frontend/img/availibility-bg.jpg')] bg-center bg-cover relative before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-[#00000066] before:z-[0] px-4 py-[40px] lg:py-[100px]">
-            <div class="max-w-7xl mx-auto bg-white p-[15px] sm:p-[40px] lg:p-[90px] rounded-[4px] relative z-[9999] shadow-md">
+     class="availibility-sec bg-[url('frontend/img/availibility-bg.jpg')] bg-center bg-cover relative before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-[#00000066] before:z-[0] px-4 py-[40px] lg:py-[100px]">
+    <div class="max-w-7xl mx-auto bg-white p-[15px] sm:p-[40px] lg:p-[90px] rounded-[4px] relative z-[9999] shadow-md">
                 <div class="grid grid-cols-12 lgap-y-8 lg:gap-x-8">
                     <div class="col-span-12 lg:col-span-5">
                         <div class="card relative">
@@ -112,5 +112,5 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+    </div>
+</section>

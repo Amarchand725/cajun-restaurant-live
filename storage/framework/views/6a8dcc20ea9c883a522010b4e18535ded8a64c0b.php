@@ -1,6 +1,6 @@
-@extends('frontend.layouts.app')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
     <!-- banner start -->
     <section class="md:mt-[-100px]">
         <div
@@ -53,24 +53,26 @@
                         Welcome To The El Royale
                     </h3>
                     <h1 class="yeseva sm:text-[37px] text-[25px] font-[400] mb-[10px] mx-auto text-center lg:w-5/12 w-full leading-[1.2] text-[#282827]">
-                    {{ $about_us->title }}
+                    <?php echo e($about_us->title); ?>
+
                     </h1>
-                    <img src="{{url('frontend/img/heading-icon.png')}}" alt="" class="mx-auto mb-5">
+                    <img src="<?php echo e(url('frontend/img/heading-icon.png')); ?>" alt="" class="mx-auto mb-5">
                 </div>
                 <div class="grid grid-cols-12 items-center pt-5 lg:gap-0 gap-5">
                     <div class="lg:col-span-4 col-span-12 lg:pt-10 pt-0">
                         <div class="">
-                            <!-- @if(!empty($about_us->short_description_logo))
-                                <img src="{{url('public/admin/images/aboutuses')}}/{{ $about_us->short_description_logo }}" alt="" class="mx-auto">
-                            @endif -->
-                            <img src="{{url('frontend/img/cajun-logo.png')}}" alt="" class="mx-auto w-5/12 mb-5">
+                            <!-- <?php if(!empty($about_us->short_description_logo)): ?>
+                                <img src="<?php echo e(url('public/admin/images/aboutuses')); ?>/<?php echo e($about_us->short_description_logo); ?>" alt="" class="mx-auto">
+                            <?php endif; ?> -->
+                            <img src="<?php echo e(url('frontend/img/cajun-logo.png')); ?>" alt="" class="mx-auto w-5/12 mb-5">
                             <p class="text-center mx-auto text-[14px] font-[700] leading-[24px] mb-[15px] text-[#9b9b9b] lg:w-10/12 w-full">
-                                {{ $about_us->short_description }}
+                                <?php echo e($about_us->short_description); ?>
+
                             </p>
-                            <!-- @if(!empty($about_us->signature))
-                                <img src="{{url('public/admin/images/aboutuses')}}/{{ $about_us->signature }}" alt="" class="mx-auto">
-                            @endif -->
-                            <img src="{{url('frontend/img/signature.png')}}" alt="" class="mx-auto">
+                            <!-- <?php if(!empty($about_us->signature)): ?>
+                                <img src="<?php echo e(url('public/admin/images/aboutuses')); ?>/<?php echo e($about_us->signature); ?>" alt="" class="mx-auto">
+                            <?php endif; ?> -->
+                            <img src="<?php echo e(url('frontend/img/signature.png')); ?>" alt="" class="mx-auto">
                         </div>
                     </div>
                     <div class="lg:col-span-4 col-span-12">
@@ -81,20 +83,20 @@
                                 <ul class="text-[14px] font-[400] text-[#9b9b9b]">
                                     <li class="flex flex-warp justify-between items-center border-dashed border-b-[1px]">
                                         <span class="leading-[40px]">Week days</span>
-                                        <span>{{ $about_us->week_days_timing }}</span>
+                                        <span><?php echo e($about_us->week_days_timing); ?></span>
                                     </li>
                                     <li class="flex flex-warp justify-between items-center border-dashed border-b-[1px]">
                                         <span class="leading-[40px]">Saturday</span>
-                                        <span>{{ $about_us->saturday_timing }}</span>
+                                        <span><?php echo e($about_us->saturday_timing); ?></span>
                                     </li>
                                     <li class="flex flex-warp justify-between items-center">
                                         <span class="leading-[40px]">Saturday</span>
-                                        <span>{{ $about_us->sunday_timing }}</span>
+                                        <span><?php echo e($about_us->sunday_timing); ?></span>
                                     </li>
                                 </ul>
                                 <div class="">
                                     <h3 class="kristi text-[25px] md:text-[30px] text-[#d3a971]">Call Us Now</h3>
-                                    <a class="yeseva text-[22px] md:text-[27px] text-[#fff] mb-[6px]" href="tel:0201023456789">{{ $about_us->call_now }}</a>
+                                    <a class="yeseva text-[22px] md:text-[27px] text-[#fff] mb-[6px]" href="tel:0201023456789"><?php echo e($about_us->call_now); ?></a>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +104,8 @@
                     <div class="lg:col-span-4 col-span-12 lg:ml-[40px] ml-0 lg:pt-10 pt-0">
                         <div class="">
                             <p class="text-[14px] mb-[20px] leading-[24px] font-[400] text-[#9b9b9b] lg:w-[95%] w-full">
-                                {{ $about_us->about_us }}
+                                <?php echo e($about_us->about_us); ?>
+
                             </p>
                             <div class="group">
                                 <a href="javascript:;" class=" bg-[#d3a971] text-[#fff] border border-[1px] border-[#d3a971] shadow-xl text-[13px] px-10 py-4 rounded-[1px] font-[700] group-hover:bg-[#282828] duration-700">
@@ -139,8 +142,8 @@
             <div class="grid grid-cols-12 lg:gap-x-7 items-center">
                 <div class="col-span-12 lg:col-span-8">
                     <div class="img flex items-center md:gap-x-2 xl:gap-x-10">
-                        <img src="{{url('frontend/img/event-1.jpg')}}" alt="" class="h-full w-full">
-                        <img src="{{url('frontend/img/event-2.jpg')}}" alt="" class="h-full md:block hidden w-full lg:mt-16">
+                        <img src="<?php echo e(url('frontend/img/event-1.jpg')); ?>" alt="" class="h-full w-full">
+                        <img src="<?php echo e(url('frontend/img/event-2.jpg')); ?>" alt="" class="h-full md:block hidden w-full lg:mt-16">
                     </div>
                 </div>
                 <div class="col-span-12 lg:col-span-4">
@@ -149,8 +152,8 @@
                             Event</p>
                         <h2 class="text-[35px] md:text-[40px] font-[400] mb-[10px] yeseva mx-auto leading-[1.2] text-[#282828] mb-[30px]">
                             A warm & Friendly Atmosphere </h2>
-                        <!-- <img src="{{ url('frontend') }}/img/shape2.png" alt="Shape" class="mx-auto mb-[20px]"> -->
-                        <img src="{{ url('frontend/img/shape2.png') }}" alt="Shape" class="mx-auto mb-[20px]">
+                        <!-- <img src="<?php echo e(url('frontend')); ?>/img/shape2.png" alt="Shape" class="mx-auto mb-[20px]"> -->
+                        <img src="<?php echo e(url('frontend/img/shape2.png')); ?>" alt="Shape" class="mx-auto mb-[20px]">
                         <p
                             class="text-[14px] sm:text-[17px] lg:text-[18px] leading-[25px] sm:leading-[32px] mb-[15px] text-[#9b9b9b] mb-[30px]">
                             Allow us to make your next special event extra special. We cater for all sized
@@ -165,5 +168,7 @@
         </div>
     </section>
     <!-- event end  -->
-@endsection
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('frontend.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\cajun-restaurant-live\resources\views/frontend/about.blade.php ENDPATH**/ ?>

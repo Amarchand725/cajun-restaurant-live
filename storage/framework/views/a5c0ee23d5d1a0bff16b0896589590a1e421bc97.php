@@ -1,6 +1,6 @@
-@extends('frontend.layouts.app')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
     <!-- our menu start -->
 <section class="md:mt-[-100px]">
     <div
@@ -39,12 +39,12 @@
                     Discover Our Blogs
                 </h2>
                 <div class="slider3">
-                    @foreach ($blogs as $blog)
+                    <?php $__currentLoopData = $blogs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="mx-4">
                             <div class="card h-full">
                                 <div class="img mb-[30px] relative before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-[#00000066] before:z-[1]">
-                                    <!-- <img src="{{ asset('public/admin/images/blogs') }}/{{ $blog->image }}" alt="" class="w-full"> -->
-                                    <img src="{{ asset('frontend/img/miss1.jpg') }}" alt="" class="w-full">
+                                    <!-- <img src="<?php echo e(asset('public/admin/images/blogs')); ?>/<?php echo e($blog->image); ?>" alt="" class="w-full"> -->
+                                    <img src="<?php echo e(asset('frontend/img/miss1.jpg')); ?>" alt="" class="w-full">
                                 </div>
                                 <div class="txt pl-[20px] sm:pl-[30px] pr-[10px] sm:pr-[15px]">
                                     <div class="meta mb-[11px]">
@@ -58,23 +58,25 @@
                                         </a>
                                     </div>
                                     <h6 class="text-[#282828] text-[18px]  lg:text-[22px] leading-[27px] font-[600] mb-[11px]">
-                                        {{ $blog->title }}
+                                        <?php echo e($blog->title); ?>
+
                                     </h6>
-                                    <span class="text-[15px] text-[#9b9b9b] font-[400]">{{ date('M d, Y | H:i A', strtotime($blog->created_at)) }}</span>
+                                    <span class="text-[15px] text-[#9b9b9b] font-[400]"><?php echo e(date('M d, Y | H:i A', strtotime($blog->created_at))); ?></span>
                                     <p class="mt-[14px] text-[14px] sm:text-[17px] leading-[32px] mb-[15px] text-[#9b9b9b]">
-                                        {{ $blog->description }}
+                                        <?php echo e($blog->description); ?>
+
                                     </p>
-                                    {{-- <a href="javascript:;" class="m text-[#222] text-[16px] font-[700] leading-[1] pb-[5px] underline decoration-2 underline-offset-8 tracking-[1.3]">
-                                        Read More
-                                    </a> --}}
+                                    
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!-- slider end  -->
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('frontend.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\cajun-restaurant-live\resources\views/frontend/blog.blade.php ENDPATH**/ ?>

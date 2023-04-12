@@ -1,6 +1,6 @@
-@extends('frontend.layouts.app')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
     <!-- our menu start -->
     <section class="md:mt-[-100px]">
         <div
@@ -68,7 +68,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/shop-tab-1.jpg')}}" alt="">
+                                <img src="<?php echo e(url('frontend/img/shop-tab-1.jpg')); ?>" alt="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -94,7 +94,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/shop-tab-2.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/shop-tab-2.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -121,7 +121,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-3.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-3.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -148,7 +148,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-4.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-4.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -175,7 +175,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-5.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-5.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -202,7 +202,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-6.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-6.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -229,7 +229,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-7.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-7.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -256,7 +256,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-8.jpg')}}" alt="" class="w-full">
+                                <img src="<?php echo e(url('frontend/img/tab-8.jpg')); ?>" alt="" class="w-full">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -282,7 +282,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-6.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-6.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -328,7 +328,7 @@
                     <div class="lg:col-span-4 sm:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-9.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-9.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -354,7 +354,7 @@
                     <div class="lg:col-span-4 sm:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-3.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-3.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -381,7 +381,7 @@
                     <div class="lg:col-span-4 sm:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/shop-tab-2.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/shop-tab-2.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -408,7 +408,7 @@
                     <div class="lg:col-span-4 sm:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/shop-tab-1.jpg')}}" alt="">
+                                <img src="<?php echo e(url('frontend/img/shop-tab-1.jpg')); ?>" alt="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -434,7 +434,7 @@
                     <div class="lg:col-span-4 sm:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-4.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-4.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -461,7 +461,7 @@
                     <div class="lg:col-span-4 sm:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-5.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-5.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -488,7 +488,7 @@
                     <div class="lg:col-span-4 sm:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-6.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-6.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -515,7 +515,7 @@
                     <div class="lg:col-span-4 sm:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-7.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-7.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -542,7 +542,7 @@
                     <div class="lg:col-span-4 sm:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-8.jpg')}}" alt="" class="w-full">
+                                <img src="<?php echo e(url('frontend/img/tab-8.jpg')); ?>" alt="" class="w-full">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -587,7 +587,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-3.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-3.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -614,7 +614,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-4.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-4.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -641,7 +641,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-5.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-5.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -668,7 +668,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-8.jpg')}}" alt="" class="w-full">
+                                <img src="<?php echo e(url('frontend/img/tab-8.jpg')); ?>" alt="" class="w-full">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -694,7 +694,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/shop-tab-1.jpg')}}" alt="">
+                                <img src="<?php echo e(url('frontend/img/shop-tab-1.jpg')); ?>" alt="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -720,7 +720,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/shop-tab-2.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/shop-tab-2.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -747,7 +747,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-6.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-6.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -774,7 +774,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-7.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-7.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -801,7 +801,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-9.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-9.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -846,7 +846,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-4.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-4.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -873,7 +873,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-5.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-5.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -900,7 +900,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-6.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-6.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -927,7 +927,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-7.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-7.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -954,7 +954,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-3.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-3.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -981,7 +981,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/shop-tab-1.jpg')}}" alt="">
+                                <img src="<?php echo e(url('frontend/img/shop-tab-1.jpg')); ?>" alt="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -1007,7 +1007,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/shop-tab-2.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/shop-tab-2.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -1034,7 +1034,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-8.jpg')}}" alt="" class="w-full">
+                                <img src="<?php echo e(url('frontend/img/tab-8.jpg')); ?>" alt="" class="w-full">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -1060,7 +1060,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-9.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-9.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -1105,7 +1105,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-6.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-6.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -1132,7 +1132,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-8.jpg')}}" alt="" class="w-full">
+                                <img src="<?php echo e(url('frontend/img/tab-8.jpg')); ?>" alt="" class="w-full">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -1158,7 +1158,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-9.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-9.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -1184,7 +1184,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-7.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-7.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -1211,7 +1211,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/shop-tab-1.jpg')}}" alt="">
+                                <img src="<?php echo e(url('frontend/img/shop-tab-1.jpg')); ?>" alt="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -1237,7 +1237,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/shop-tab-2.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/shop-tab-2.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -1264,7 +1264,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-3.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-3.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -1291,7 +1291,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-4.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-4.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -1318,7 +1318,7 @@
                     <div class="lg:col-span-4 md:col-span-6 col-span-12">
                         <div class="relative group overflow-hidden">
                             <div class="mx-auto">
-                                <img src="{{url('frontend/img/tab-5.jpg')}}" alt="" class="">
+                                <img src="<?php echo e(url('frontend/img/tab-5.jpg')); ?>" alt="" class="">
                             </div>
                             <div
                                 class="absolute bottom-[-50px] left-[100px] p-4 group-hover:opacity-100 opacity-0 group-hover:bottom-[-6%] w-full transition-all ease-in-out duration-700 ">
@@ -1363,4 +1363,6 @@
         </div>
     </section>
     <!-- tabs end -->
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('frontend.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\cajun-restaurant-live\resources\views/frontend/shop.blade.php ENDPATH**/ ?>
